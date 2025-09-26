@@ -74,7 +74,7 @@ export function Book() {
                 <Badge variant="outline">Audiobook Available</Badge>
               </div>
               
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2 justify-center">
                 <Button asChild className="bg-jw-burgundy hover:bg-jw-rust">
                   <Link href="https://a.co/d/67tuSAW" target="_blank">
                     Buy Now
@@ -85,7 +85,7 @@ export function Book() {
                 </Button>
                 <Button variant="outline" asChild>
                   <Link href="/Joni Woods Media Kit_Final.pdf" target="_blank">
-                    Read Preview
+                    Book Preview
                   </Link>
                 </Button>
               </div>

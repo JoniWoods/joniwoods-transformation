@@ -10,6 +10,7 @@ import { Blog } from "@/components/sections/blog";
 import { TransformationForm } from "@/components/sections/transformation-form";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/sections/footer";
+import { FloatingElements } from "@/components/floating-elements";
 
 export default function HomePage() {
   return (
@@ -17,16 +18,17 @@ export default function HomePage() {
       <Navigation />
       <main>
         <Hero />
-        <MediaAppearances />
         <TransformationForm />
         <About />
-        <Services />
         <Book />
+        <Services />
+        <MediaAppearances />
         <Testimonials />
         <Blog />
         <Contact />
       </main>
       <Footer />
+      <FloatingElements />
     </>
   );
 }

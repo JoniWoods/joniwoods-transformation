@@ -31,7 +31,7 @@ const articles = [
     category: "Self-Compassion",
     excerpt: "Learning to extend the same kindness to ourselves that we offer others, and why self-compassion is crucial for growth.",
     topics: ["Self-Compassion", "Grace", "Growth"],
-    url: "https://journeylifecoaching.life/blog/show-yourself-grace/"
+    url: "https://journeylifecoaching.life/blog/the-north-star/"
   },
   {
     title: "Finding Your Way",

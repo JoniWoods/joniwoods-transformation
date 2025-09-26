@@ -169,9 +169,11 @@ Let's hop on a free discovery call so I can learn more about your unique situati
                   </Select>
                 </div>
                 
-                <Button type="submit" className="w-full bg-jw-burgundy hover:bg-jw-rust" size="lg" disabled={loading}>
-                  {loading ? "Creating Your Personalized Roadmap..." : "Get My Free Transformation Roadmap →"}
-                </Button>
+                <div className="flex justify-center">
+                  <Button type="submit" className="w-full sm:w-auto bg-jw-burgundy hover:bg-jw-rust" size="lg" disabled={loading}>
+                    {loading ? "Creating Your Personalized Roadmap..." : "Get My Free Transformation Roadmap →"}
+                  </Button>
+                </div>
               </form>
             </CardContent>
           </Card>
@@ -192,11 +194,11 @@ Let's hop on a free discovery call so I can learn more about your unique situati
               <CardDescription className="text-center mb-6">
                 📧 Check your email - I've sent this roadmap plus your free resources!
               </CardDescription>
-              <div className="flex gap-2 justify-center">
-                <Button variant="outline" onClick={handleReset}>
+              <div className="flex flex-col sm:flex-row gap-2 justify-center">
+                <Button variant="outline" onClick={handleReset} className="w-full sm:w-auto">
                   Ask Another Question
                 </Button>
-                <Button asChild className="bg-jw-burgundy hover:bg-jw-rust">
+                <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
                   <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
                     Book Discovery Call
                   </Link>

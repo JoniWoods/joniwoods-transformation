@@ -27,9 +27,7 @@ export function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all ${
-      scrolled ? "bg-background/95 backdrop-blur border-b" : "bg-transparent"
-    }`}>
+    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Image 
@@ -39,7 +37,7 @@ export function Navigation() {
             height={40}
             className="rounded-full"
           />
-          <span className="font-bold text-xl hidden sm:inline-block">
+          <span className="font-bold text-xl">
             Joni Woods
           </span>
         </Link>
@@ -54,7 +52,7 @@ export function Navigation() {
               {item.label}
             </Link>
           ))}
-          <Button asChild className="bg-jw-burgundy hover:bg-jw-rust">
+          <Button asChild className="bg-white text-jw-blue border-2 border-jw-blue hover:bg-jw-blue hover:text-white">
             <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
               Book Call
             </Link>
@@ -63,7 +61,7 @@ export function Navigation() {
         
         {/* Mobile menu button */}
         <div className="md:hidden">
-          <Button variant="ghost" size="sm" asChild>
+          <Button variant="ghost" size="sm" asChild className="bg-white text-jw-blue border-2 border-jw-blue hover:bg-jw-blue hover:text-white">
             <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
               Book Call
             </Link>

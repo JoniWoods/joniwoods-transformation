@@ -68,14 +68,16 @@ export function Services() {
                   </li>
                 ))}
               </ul>
-              <Button asChild className="w-full bg-jw-blue text-white hover:bg-jw-blue/80">
-                <Link href={service.href} target="_blank">
-                  {service.cta}
-                  <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </Button>
+              <div className="flex justify-center">
+                <Button asChild className="w-full sm:w-auto bg-jw-blue text-white hover:bg-jw-blue/80">
+                  <Link href={service.href} target="_blank">
+                    {service.cta}
+                    <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         ))}

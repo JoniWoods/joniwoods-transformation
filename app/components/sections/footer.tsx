@@ -3,6 +3,15 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
+// TikTok icon component since it's not in lucide-react
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 015.2-1.74V12.5a7.72 7.72 0 00-4.67-1.51c-4.08 0-7.72 3.33-7.72 7.72s3.64 7.72 7.72 7.72 7.72-3.33 7.72-7.72V9.4a8.07 8.07 0 004.25 1.2v-3.91z"/>
+    </svg>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="bg-jw-charcoal text-white">
@@ -101,12 +110,13 @@ export function Footer() {
                 <Instagram className="h-6 w-6" />
               </Link>
               <Link 
-                href="https://www.linkedin.com/in/joniwoods" 
+                href="https://www.tiktok.com/@joniwoods730" 
                 target="_blank"
                 className="text-jw-gray hover:text-jw-yellow-light transition-colors"
               >
-                <Linkedin className="h-6 w-6" />
+                <TikTokIcon className="h-6 w-6" />
               </Link>
+              {/* LinkedIn link temporarily removed due to access restrictions */}
               <Link 
                 href="https://www.facebook.com/joni.woods.9" 
                 target="_blank"
