@@ -8,7 +8,58 @@ export function About() {
   return (
     <section id="about" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
       <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
-        <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+        {/* Image and highlights - shows first on mobile */}
+        <div className="flex flex-col gap-4 order-1 sm:order-2">
+          <div className="relative aspect-square rounded-lg overflow-hidden">
+            <Image
+              src="/images/Joni_Woods_Author_Portrait-1.jpg"
+              alt="Joni Woods - Author and Life Coach"
+              fill
+              className="object-cover"
+            />
+          </div>
+          
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-4">Professional Highlights</h3>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">
+                    15+ years in communication & emotional intelligence
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">
+                    Fortune 500 consultant & corporate speaker
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">
+                    Author of "Burned, Blocked, and Better Than Ever"
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">
+                    Former youth & young adult pastor
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground">
+                    Mother to Ashton and Scarlett
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Text content - shows second on mobile */}
+        <div className="relative overflow-hidden rounded-lg border bg-background p-2 order-2 sm:order-1">
           <div className="flex flex-col justify-between rounded-md p-6">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -60,55 +111,6 @@ export function About() {
               </Button>
             </div>
           </div>
-        </div>
-        
-        <div className="flex flex-col gap-4">
-          <div className="relative aspect-square rounded-lg overflow-hidden">
-            <Image
-              src="/images/Joni_Woods_Author_Portrait-1.jpg"
-              alt="Joni Woods - Author and Life Coach"
-              fill
-              className="object-cover"
-            />
-          </div>
-          
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Professional Highlights</h3>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground">
-                    15+ years in communication & emotional intelligence
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground">
-                    Fortune 500 consultant & corporate speaker
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground">
-                    Author of "Burned, Blocked, and Better Than Ever"
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground">
-                    Former youth & young adult pastor
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground">
-                    Mother to Ashton and Scarlett
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

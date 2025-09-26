@@ -4,42 +4,48 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
-const resources = [
+const articles = [
   {
-    title: "The Messy Truth About Healing",
+    title: "a beautiful goodbye",
     category: "Personal Growth",
-    excerpt: "Why healing isn't linear and why that's actually good news for your transformation journey. Learn to embrace the process instead of rushing the outcome.",
-    topics: ["Healing", "Self-awareness", "Personal Growth"]
+    excerpt: "A reflection on meaningful connections and the beauty found in saying goodbye to friendships that have run their course.",
+    topics: ["Friendship", "Connection", "Personal Growth"],
+    url: "https://journeylifecoaching.life/blog/a-beautiful-goodbye/"
   },
   {
-    title: "Breaking Generational Patterns",
-    category: "Relationships",
-    excerpt: "How to identify and interrupt the cycles that keep your family stuck in the same patterns. Create a new legacy for future generations.",
-    topics: ["Family Healing", "Generational Trauma", "Patterns"]
+    title: "2:30AM",
+    category: "Reflection",
+    excerpt: "Late-night musings on love, loss, and the quiet moments when our hearts speak loudest in the darkness.",
+    topics: ["Love", "Loss", "Reflection"],
+    url: "https://journeylifecoaching.life/blog/2-30am/"
   },
   {
-    title: "From Conflict to Connection",
-    category: "Communication",
-    excerpt: "Transform workplace tensions into opportunities for deeper understanding and stronger relationships using emotional intelligence.",
-    topics: ["Conflict Resolution", "Communication", "Leadership"]
+    title: "With all my love, xoxo J",
+    category: "Personal Growth",
+    excerpt: "A heartfelt exploration of vulnerability, healing, and the courage it takes to show up authentically in our relationships.",
+    topics: ["Vulnerability", "Healing", "Authenticity"],
+    url: "https://journeylifecoaching.life/blog/with-all-my-love-xoxo-j/"
   },
   {
-    title: "Rebuilding After Divorce",
-    category: "Life Transitions",
-    excerpt: "Navigate the complex emotions of divorce while maintaining your identity and building a foundation for healthy future relationships.",
-    topics: ["Divorce Recovery", "Identity", "Rebuilding"]
+    title: "Not Tests, Affirmations!",
+    category: "Mindset",
+    excerpt: "Shifting perspective from viewing life's challenges as tests to seeing them as affirmations of our growth and resilience.",
+    topics: ["Mindset", "Growth", "Resilience"],
+    url: "https://journeylifecoaching.life/blog/not-tests-affirmations/"
   },
   {
-    title: "Emotional Intelligence in Leadership",
-    category: "Professional Development",
-    excerpt: "Why the most effective leaders aren't just technically skilled—they're emotionally intelligent. Learn to lead with both competence and compassion.",
-    topics: ["Leadership", "EQ", "Team Building"]
+    title: "The North Star",
+    category: "Poetry",
+    excerpt: "A poetic journey about finding direction in life when everything feels uncertain and the path forward isn't clear.",
+    topics: ["Direction", "Poetry", "Life"],
+    url: "https://journeylifecoaching.life/blog/the-north-star/"
   },
   {
-    title: "Setting Healthy Boundaries",
-    category: "Self-Care",
-    excerpt: "Stop people-pleasing and start protecting your peace. Learn how to communicate your needs without guilt or manipulation.",
-    topics: ["Boundaries", "Self-Care", "Communication"]
+    title: "Midnight thoughts",
+    category: "Reflection",
+    excerpt: "Raw, honest reflections that come alive in the quiet hours when the world sleeps and our hearts are most honest.",
+    topics: ["Thoughts", "Honesty", "Reflection"],
+    url: "https://journeylifecoaching.life/blog/midnight-thoughts/"
   }
 ];
 
@@ -50,7 +56,7 @@ export function Blog() {
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Latest{" "}
           <span className="gradient-text">
-            Resources
+            Articles
           </span>
         </h2>
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
@@ -60,22 +66,22 @@ export function Blog() {
       </div>
       
       <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[76rem] md:grid-cols-3">
-        {resources.map((resource, index) => (
+        {articles.map((article, index) => (
           <Card key={index} className="group cursor-pointer transition-all hover:scale-105 h-full flex flex-col">
             <CardHeader className="flex-none">
               <Badge variant="outline" className="w-fit mb-2">
-                {resource.category}
+                {article.category}
               </Badge>
               <CardTitle className="group-hover:text-jw-burgundy transition-colors text-lg">
-                {resource.title}
+                {article.title}
               </CardTitle>
             </CardHeader>
             <CardContent className="flex-1">
               <CardDescription className="mb-4">
-                {resource.excerpt}
+                {article.excerpt}
               </CardDescription>
               <div className="flex flex-wrap gap-1">
-                {resource.topics.map((topic, idx) => (
+                {article.topics.map((topic, idx) => (
                   <Badge key={idx} variant="secondary" className="text-xs">
                     {topic}
                   </Badge>
@@ -83,12 +89,14 @@ export function Blog() {
               </div>
             </CardContent>
             <CardFooter>
-              <div className="flex items-center text-jw-burgundy font-semibold group-hover:text-jw-rust transition-colors w-full">
-                <span>Coming Soon</span>
-                <svg className="ml-auto h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
+              <Link href={article.url} target="_blank" className="w-full">
+                <div className="flex items-center text-jw-burgundy font-semibold group-hover:text-jw-rust transition-colors w-full">
+                  <span>Read Full Article</span>
+                  <svg className="ml-auto h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </Link>
             </CardFooter>
           </Card>
         ))}
@@ -99,12 +107,12 @@ export function Blog() {
           Want these insights delivered directly to you?
         </p>
         <div className="flex flex-col sm:flex-row gap-2 justify-center">
-          <Button variant="outline" asChild>
+          <Button asChild className="bg-jw-blue text-white hover:bg-jw-blue/80">
             <Link href="http://journeylifecoaching.life" target="_blank">
               Visit Blog
             </Link>
           </Button>
-          <Button variant="outline" asChild>
+          <Button asChild className="bg-jw-burgundy text-white border-2 border-jw-burgundy/80 hover:bg-transparent hover:text-jw-burgundy hover:border-jw-burgundy">
             <Link href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" target="_blank">
               YouTube Channel
             </Link>

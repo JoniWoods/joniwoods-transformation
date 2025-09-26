@@ -68,7 +68,7 @@ export function Services() {
                   </li>
                 ))}
               </ul>
-              <Button variant="outline" asChild className="w-full group-hover:bg-jw-burgundy group-hover:text-white group-hover:border-jw-burgundy">
+              <Button asChild className="w-full bg-jw-blue text-white hover:bg-jw-blue/80">
                 <Link href={service.href} target="_blank">
                   {service.cta}
                   <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

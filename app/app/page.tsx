@@ -16,12 +16,12 @@ export default function HomePage() {
       <Navigation />
       <main>
         <Hero />
+        <TransformationForm />
         <About />
         <Services />
         <Book />
         <Testimonials />
         <Blog />
-        <TransformationForm />
         <Contact />
       </main>
       <Footer />
