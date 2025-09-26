@@ -97,3 +97,8 @@ html {
 .gradient-text {
   @apply bg-gradient-to-r from-jw-burgundy to-jw-rust bg-clip-text text-transparent;
 }
+
+/* Blue gradient text effect */
+.gradient-text-blue {
+  @apply bg-gradient-to-r from-jw-blue to-blue-600 bg-clip-text text-transparent;
+}

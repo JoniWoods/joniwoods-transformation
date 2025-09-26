@@ -8,7 +8,7 @@ export function Hero() {
     <section 
       className="w-full space-y-6 pb-8 pt-24 md:pb-12 md:pt-32 lg:py-40 relative bg-black"
       style={{
-        backgroundImage: 'url(/images/hero/JoniWoodsWebsite_Hero.png)',
+        backgroundImage: 'url(/images/hero/JoniWoodsWebsite_Hero_New.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -24,7 +24,7 @@ export function Hero() {
         <h1 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white">
           Burned, Blocked &
           <br />
-          <span className="gradient-text">
+          <span className="gradient-text-blue">
             Better Than Ever
           </span>
         </h1>
