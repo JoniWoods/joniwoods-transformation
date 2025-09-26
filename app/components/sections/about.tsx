@@ -14,14 +14,15 @@ export function About() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Meet <span className="gradient-text">Joni Woods</span>
               </h2>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <h3 className="text-xl font-semibold mb-4 italic text-muted-foreground">
                 Certified life coach and culture strategist with over 15 years 
                 helping individuals, couples, and organizations strengthen 
                 communication and lead with emotional intelligence.
-              </p>
+              </h3>
             </div>
             
             <div className="space-y-4 text-muted-foreground">
+              <br />
               <p>
                 As the founder of Journey Coaching, I specialize in guiding 
                 clients through personal growth, relational healing, and 
@@ -41,12 +42,18 @@ export function About() {
             </div>
 
             <div className="flex gap-2 pt-4">
-              <Button variant="outline" asChild>
+              <Button 
+                className="bg-jw-blue/60 text-white border-2 border-jw-blue hover:bg-jw-blue hover:text-white" 
+                asChild
+              >
                 <Link href="http://joniwoods.com" target="_blank">
                   Learn More
                 </Link>
               </Button>
-              <Button variant="outline" asChild>
+              <Button 
+                className="bg-jw-burgundy text-white border-2 border-jw-burgundy/80 hover:bg-transparent hover:text-jw-burgundy hover:border-jw-burgundy" 
+                asChild
+              >
                 <Link href="https://www.youtube.com/@joniwoods7141" target="_blank">
                   YouTube Channel
                 </Link>

@@ -27,6 +27,7 @@ const config = {
         'jw-yellow': '#f6c126',        // Golden yellow
         'jw-charcoal': '#545454',      // Dark charcoal
         'jw-gray': '#9a9a9a',          // Medium gray
+        'jw-blue': '#4A90E2',          // Blue from logo
         
         // Keep template's system colors
         border: "hsl(var(--border))",
@@ -64,7 +65,10 @@ const config = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        'myriad-light': ['Myriad Pro Light', 'sans-serif'],
+        'myriad-semibold': ['Myriad Pro Semibold', 'sans-serif'],
+        'arial-unicode': ['Arial Unicode', 'sans-serif'],
+        sans: ['Myriad Pro Light', 'Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
