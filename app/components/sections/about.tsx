@@ -73,54 +73,54 @@ export function About() {
               className="w-full h-auto object-cover rounded-lg"
             />
           </div>
+          
+          {/* Professional Highlights - Under author photo */}
+          <div className="max-w-sm mx-auto">
+            <Card>
+              <CardContent className="p-4">
+                <h3 className="text-lg font-semibold mb-3 text-center">Professional Highlights</h3>
+                <div className="space-y-2">
+                  <div className="flex items-start space-x-3">
+                    <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground/80">
+                      15+ years in communication & emotional intelligence
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground/80">
+                      Fortune 500 consultant & keynote speaker
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground/80">
+                      Author of "Burned, Blocked, and Better Than Ever"
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground/80">
+                      Certified Life Coach (CLC) & Culture Strategist
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground/80">
+                      Community leader in Ann Arbor, Michigan
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground/80">
+                      Specializes in relational healing & boundary setting
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </div>
-      
-      {/* Professional Highlights section */}
-      <div className="mx-auto max-w-[64rem]">
-        <Card>
-          <CardContent className="p-6">
-            <h3 className="text-xl font-semibold mb-4 text-center">Professional Highlights</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="flex items-start space-x-3">
-                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                <p className="text-sm text-muted-foreground/80">
-                  15+ years in communication & emotional intelligence
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                <p className="text-sm text-muted-foreground/80">
-                  Fortune 500 consultant & keynote speaker
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                <p className="text-sm text-muted-foreground/80">
-                  Author of "Burned, Blocked, and Better Than Ever"
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                <p className="text-sm text-muted-foreground/80">
-                  Certified Life Coach (CLC) & Culture Strategist
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                <p className="text-sm text-muted-foreground/80">
-                  Community leader in Ann Arbor, Michigan
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                <p className="text-sm text-muted-foreground/80">
-                  Specializes in relational healing & boundary setting
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
