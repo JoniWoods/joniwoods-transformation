@@ -17,7 +17,6 @@ export function Footer() {
               "Creating the future You want!"
             </p>
             <div className="space-y-2 text-jw-gray">
-              <p>Joniwoods@gmail.com | 734-436-6200</p>
               <p>Journey Coaching - Human Connection & Culture Specialist</p>
             </div>
           </div>
