@@ -6,20 +6,6 @@ import Link from "next/link";
 
 const articles = [
   {
-    title: "a beautiful goodbye",
-    category: "Personal Growth",
-    excerpt: "A reflection on meaningful connections and the beauty found in saying goodbye to friendships that have run their course.",
-    topics: ["Friendship", "Connection", "Personal Growth"],
-    url: "https://journeylifecoaching.life/blog/a-beautiful-goodbye/"
-  },
-  {
-    title: "2:30AM",
-    category: "Reflection",
-    excerpt: "Late-night musings on love, loss, and the quiet moments when our hearts speak loudest in the darkness.",
-    topics: ["Love", "Loss", "Reflection"],
-    url: "https://journeylifecoaching.life/blog/2-30am/"
-  },
-  {
     title: "With all my love, xoxo J",
     category: "Personal Growth",
     excerpt: "A heartfelt exploration of vulnerability, healing, and the courage it takes to show up authentically in our relationships.",
@@ -41,11 +27,25 @@ const articles = [
     url: "https://journeylifecoaching.life/blog/the-north-star/"
   },
   {
-    title: "Midnight thoughts",
-    category: "Reflection",
-    excerpt: "Raw, honest reflections that come alive in the quiet hours when the world sleeps and our hearts are most honest.",
-    topics: ["Thoughts", "Honesty", "Reflection"],
-    url: "https://journeylifecoaching.life/blog/midnight-thoughts/"
+    title: "Show Yourself Grace",
+    category: "Self-Compassion",
+    excerpt: "Learning to extend the same kindness to ourselves that we offer others, and why self-compassion is crucial for growth.",
+    topics: ["Self-Compassion", "Grace", "Growth"],
+    url: "https://journeylifecoaching.life/blog/show-yourself-grace/"
+  },
+  {
+    title: "Finding Your Way",
+    category: "Direction",
+    excerpt: "Sometimes the most important journey is the one that leads you back to yourself and your true purpose.",
+    topics: ["Purpose", "Direction", "Self-Discovery"],
+    url: "https://journeylifecoaching.life/blog/with-all-my-love-xoxo-j/"
+  },
+  {
+    title: "Mindful Moments",
+    category: "Mindfulness",
+    excerpt: "Finding peace and wisdom in life's everyday moments and learning to be present in each experience.",
+    topics: ["Mindfulness", "Peace", "Presence"],
+    url: "https://journeylifecoaching.life/blog/not-tests-affirmations/"
   }
 ];
 
@@ -114,7 +114,7 @@ export function Blog() {
           </Button>
           <Button asChild className="bg-jw-burgundy text-white border-2 border-jw-burgundy/80 hover:bg-transparent hover:text-jw-burgundy hover:border-jw-burgundy">
             <Link href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" target="_blank">
-              YouTube Channel
+              Subscribe
             </Link>
           </Button>
         </div>

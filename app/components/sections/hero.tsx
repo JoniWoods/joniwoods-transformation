@@ -5,14 +5,23 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="container space-y-6 pb-8 pt-24 md:pb-12 md:pt-32 lg:py-40">
-      <div className="mx-auto flex max-w-[64rem] flex-col items-center space-y-4 text-center">
+    <section 
+      className="container space-y-6 pb-8 pt-24 md:pb-12 md:pt-32 lg:py-40 relative"
+      style={{
+        backgroundImage: 'url(/images/hero/Website Hero Image.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50 rounded-lg"></div>
+      <div className="mx-auto flex max-w-[64rem] flex-col items-center space-y-4 text-center relative z-10">
         <Badge variant="secondary" className="rounded-full px-4 py-1.5 bg-jw-yellow text-jw-charcoal">
           <span className="mr-2 inline-block h-2 w-2 rounded-full bg-jw-burgundy animate-pulse" />
           New Book Available Now
         </Badge>
         
-        <h1 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        <h1 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white">
           Burned, Blocked &
           <br />
           <span className="gradient-text">
@@ -20,8 +29,8 @@ export function Hero() {
           </span>
         </h1>
         
-        <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-          A raw, faith-rooted memoir of divorce, self-discovery, and the healing 
+        <p className="max-w-[42rem] leading-normal text-white/90 sm:text-xl sm:leading-8">
+          A raw, faith-rooted memoir of self-discovery, and the healing 
           that begins when you stop pretending you're fine.
         </p>
         
@@ -42,13 +51,13 @@ export function Hero() {
         </div>
         
         <div className="flex flex-col items-center space-y-4 pt-8">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-white/80">
             Certified Life Coach • Culture Strategist • Speaker
           </p>
           <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="outline">15+ Years Experience</Badge>
-            <Badge variant="outline">Fortune 500 Consultant</Badge>
-            <Badge variant="outline">Podcast Guest</Badge>
+            <Badge variant="outline" className="text-white border-white/60 bg-white/10">15+ Years Experience</Badge>
+            <Badge variant="outline" className="text-white border-white/60 bg-white/10">Fortune 500 Consultant</Badge>
+            <Badge variant="outline" className="text-white border-white/60 bg-white/10">Podcast Guest</Badge>
           </div>
         </div>
       </div>
