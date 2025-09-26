@@ -35,7 +35,7 @@ export function Hero() {
         </p>
         
         <div className="flex flex-col gap-4 sm:flex-row">
-          <Button size="lg" asChild className="bg-jw-burgundy hover:bg-jw-rust">
+          <Button size="lg" asChild className="bg-jw-blue hover:bg-jw-blue/80">
             <Link href="https://a.co/d/67tuSAW" target="_blank">
               Get the Book
               <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ export function Hero() {
         </div>
         
         <div className="flex flex-col items-center space-y-4 pt-8">
-          <p className="text-sm text-white/80">
+          <p className="text-sm text-white/80 font-semibold">
             Certified Life Coach • Culture Strategist • Keynote Speaker • Author
           </p>
           <div className="flex flex-wrap items-center gap-2">

@@ -7,8 +7,9 @@ import Link from "next/link";
 export function About() {
   return (
     <section id="about" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
-      <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
-        {/* Image first, then Meet Joni Woods, then Professional Highlights */}
+      <div className="mx-auto grid justify-center gap-6 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
+        
+        {/* Mobile: Image above text, Desktop: Image on right */}
         <div className="flex flex-col gap-4 order-1 sm:order-2">
           <div className="relative aspect-[3/4] rounded-lg overflow-hidden max-w-sm mx-auto">
             <Image
@@ -20,7 +21,7 @@ export function About() {
           </div>
         </div>
 
-        {/* Meet Joni Woods Text content */}
+        {/* Text content - Mobile: below image, Desktop: left side */}
         <div className="relative overflow-hidden rounded-lg border bg-background p-2 order-2 sm:order-1">
           <div className="flex flex-col justify-between rounded-md p-6">
             <div className="space-y-2">
@@ -76,7 +77,7 @@ export function About() {
         </div>
       </div>
       
-      {/* Professional Highlights section - now positioned to fit better under the author photo */}
+      {/* Professional Highlights section */}
       <div className="mx-auto max-w-[64rem]">
         <Card>
           <CardContent className="p-6">
