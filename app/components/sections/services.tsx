@@ -1,182 +1,93 @@
 
-"use client";
-
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { User, Users, Mic2, MessageSquare, Calendar, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+
+const services = [
+  {
+    title: "Individual Coaching",
+    description: "One-on-one coaching for personal growth, relationship healing, and emotional intelligence development. Perfect for navigating life transitions and building self-awareness.",
+    features: ["Personal growth coaching", "Relationship healing", "Emotional intelligence", "Life transitions"],
+    cta: "Book Discovery Call",
+    href: "https://calendly.com/joniwoods/virtual-coffee"
+  },
+  {
+    title: "Corporate Culture Strategy", 
+    description: "Transform your organization's culture with emotional intelligence training, leadership development, and communication workshops.",
+    features: ["Leadership development", "Team communication", "Culture assessment", "Conflict resolution"],
+    cta: "Schedule Consultation",
+    href: "https://calendly.com/joniwoods/virtual-coffee"
+  },
+  {
+    title: "Speaking & Workshops",
+    description: "Engaging presentations on emotional intelligence, healthy relationships, and personal growth for conferences, organizations, and events.",
+    features: ["Keynote speaking", "Interactive workshops", "Team building", "Personal development"],
+    cta: "Book Speaking", 
+    href: "https://calendly.com/joniwoods/virtual-coffee"
+  },
+  {
+    title: "Relationship Coaching",
+    description: "Whether you're single, dating, married, or rebuilding after separation, learn to create emotionally safe and fulfilling relationships.",
+    features: ["Communication skills", "Boundary setting", "Conflict resolution", "Relationship rebuilding"],
+    cta: "Start Healing",
+    href: "https://calendly.com/joniwoods/virtual-coffee"
+  }
+];
 
 export function Services() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const services = [
-    {
-      icon: User,
-      title: "Individual Coaching",
-      subtitle: "1-on-1 Transformation",
-      description: "Personalized coaching sessions designed to break through your specific blocks and create lasting change. We'll work together to identify patterns, heal wounds, and build the life you truly want.",
-      features: [
-        "Deep pattern recognition",
-        "Trauma-informed healing",
-        "Goal achievement strategies",
-        "Weekly accountability",
-        "Custom transformation plan"
-      ],
-      color: "jw-accent",
-      bgColor: "jw-accent/5"
-    },
-    {
-      icon: Users,
-      title: "Group Dynamics",
-      subtitle: "Collective Healing",
-      description: "Experience the power of community healing through carefully facilitated group sessions. Connect with others on similar journeys while receiving expert guidance.",
-      features: [
-        "Peer support network",
-        "Shared vulnerability",
-        "Group accountability",
-        "Collective wisdom",
-        "Cost-effective option"
-      ],
-      color: "jw-accent2",
-      bgColor: "jw-accent2/5"
-    },
-    {
-      icon: Mic2,
-      title: "Workshops & Speaking",
-      subtitle: "Corporate & Events",
-      description: "Powerful presentations that transform workplace culture and individual mindsets. From Fortune 500 companies to intimate workshops, I deliver actionable insights.",
-      features: [
-        "Keynote presentations",
-        "Workshop facilitation",
-        "Team building sessions",
-        "Culture transformation",
-        "Custom content creation"
-      ],
-      color: "jw-accent3",
-      bgColor: "jw-accent3/5"
-    },
-    {
-      icon: MessageSquare,
-      title: "Conflict Resolution",
-      subtitle: "Relationship Healing",
-      description: "Navigate difficult relationships and resolve conflicts with compassion and clarity. Learn communication skills that build bridges instead of walls.",
-      features: [
-        "Mediation services",
-        "Communication training",
-        "Boundary setting",
-        "Family dynamics",
-        "Workplace conflicts"
-      ],
-      color: "jw-accent4",
-      bgColor: "jw-accent4/5"
-    }
-  ];
-
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <Badge variant="secondary" className="mb-4">
-            Services & Offerings
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Your Path to{" "}
-            <span className="bg-gradient-to-r from-jw-accent to-jw-accent3 bg-clip-text text-transparent">
-              Transformation
-            </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Whether you're ready for individual work, group support, or organizational change, 
-            I meet you where you are and guide you where you want to go.
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.2 + index * 0.1, duration: 0.8 }}
-            >
-              <Card className={`p-8 h-full hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-${service.bgColor} to-white group`}>
-                <div className="flex items-start mb-6">
-                  <div className={`p-3 bg-${service.color}/10 rounded-lg mr-4 group-hover:bg-${service.color}/20 transition-colors`}>
-                    <service.icon className={`w-8 h-8 text-${service.color}`} />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-1">
-                      {service.title}
-                    </h3>
-                    <p className={`text-${service.color} font-medium`}>
-                      {service.subtitle}
-                    </p>
-                  </div>
-                </div>
-                
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">What's Included:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <ArrowRight className={`w-4 h-4 text-${service.color} mr-2 flex-shrink-0`} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <Button 
-                  onClick={() => window.open("https://calendly.com/joniwoods/virtual-coffee", "_blank")}
-                  className={`w-full bg-${service.color} hover:bg-${service.color}/90 text-white`}
-                >
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Learn More
-                </Button>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-center"
-        >
-          <Card className="p-8 bg-gradient-to-r from-jw-accent4/5 to-jw-accent/5 border-0">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Not Sure Which Service is Right for You?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Book a complimentary virtual coffee session and let's explore your needs together. 
-              No pressure, just conversation and clarity.
-            </p>
-            <Button 
-              onClick={() => window.open("https://calendly.com/joniwoods/virtual-coffee", "_blank")}
-              size="lg"
-              className="bg-jw-accent hover:bg-jw-accent/90"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule Your Free Consultation
-            </Button>
+    <section id="services" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
+      <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+          <span className="gradient-text">
+            Transformation
+          </span>{" "}
+          Programs
+        </h2>
+        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          Whether you're healing from trauma, building better relationships, or leading teams 
+          through change, I meet you where you are and guide you where you want to go.
+        </p>
+      </div>
+      
+      <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
+        {services.map((service, index) => (
+          <Card key={index} className="group relative overflow-hidden">
+            <CardHeader>
+              <CardTitle className="text-xl">{service.title}</CardTitle>
+              <CardDescription className="text-base">
+                {service.description}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2 mb-4">
+                {service.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                    <span className="text-jw-burgundy mr-2">•</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Button variant="outline" asChild className="w-full group-hover:bg-jw-burgundy group-hover:text-white group-hover:border-jw-burgundy">
+                <Link href={service.href} target="_blank">
+                  {service.cta}
+                  <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </Button>
+            </CardContent>
           </Card>
-        </motion.div>
+        ))}
+      </div>
+      
+      <div className="mx-auto text-center">
+        <p className="text-muted-foreground mb-4">Ready to begin your transformation journey?</p>
+        <Button size="lg" asChild className="bg-jw-burgundy hover:bg-jw-rust">
+          <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+            Schedule Free Consultation
+          </Link>
+        </Button>
       </div>
     </section>
   );

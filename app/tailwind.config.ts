@@ -20,12 +20,13 @@ const config = {
     },
     extend: {
       colors: {
-        // Joni Woods Brand Colors (Content Swap)
-        'jw-accent': '#e63946',        // Primary red/coral from book
-        'jw-accent-soft': '#f77f87',   // Lighter red
-        'jw-accent2': '#f4a261',       // Warm orange
-        'jw-accent3': '#2a9d8f',       // Teal green
-        'jw-accent4': '#264653',       // Deep teal
+        // Joni Woods Brand Colors from brand guide
+        'jw-burgundy': '#9a1b1f',      // Deep burgundy/maroon
+        'jw-rust': '#c04334',          // Rust red
+        'jw-yellow-light': '#fff467',  // Light yellow
+        'jw-yellow': '#f6c126',        // Golden yellow
+        'jw-charcoal': '#545454',      // Dark charcoal
+        'jw-gray': '#9a9a9a',          // Medium gray
         
         // Keep template's system colors
         border: "hsl(var(--border))",
@@ -61,6 +62,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

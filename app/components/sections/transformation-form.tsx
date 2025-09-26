@@ -2,294 +2,209 @@
 "use client";
 
 import { useState } from "react";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Sparkles, Send, CheckCircle, Heart, Target } from "lucide-react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import Link from "next/link";
+
+interface FormData {
+  name: string;
+  email: string;
+  currentSituation: string;
+  desiredOutcome: string;
+  supportType: string;
+}
 
 export function TransformationForm() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    challenge: "",
-    goal: "",
-    timeframe: "",
-    experience: "",
-    message: ""
+    currentSituation: "",
+    desiredOutcome: "",
+    supportType: "individual"
   });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [aiResponse, setAiResponse] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [personalizedResponse, setPersonalizedResponse] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate AI response generation
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Generate personalized response based on form data
+    setLoading(true);
+
+    // Simulate personalized response generation
+    setTimeout(() => {
+      const response = generatePersonalizedResponse(formData);
+      setPersonalizedResponse(response);
+      setSubmitted(true);
+      setLoading(false);
+    }, 2000);
+  };
+
+  const generatePersonalizedResponse = (data: FormData) => {
     const responses = {
-      healing: `${formData.name}, your healing journey takes courage. The fact that you're here means you're ready to transform your pain into power. Based on your challenge with ${formData.challenge.toLowerCase()}, I recommend starting with individual coaching sessions where we can address the root patterns holding you back.`,
-      
-      relationships: `${formData.name}, relationships are our greatest teachers and sometimes our deepest wounds. Your desire to heal ${formData.challenge.toLowerCase()} shows you're ready to break generational patterns. Group dynamics sessions might be perfect for you - there's incredible power in healing with others.`,
-      
-      career: `${formData.name}, when our work doesn't align with our soul, we feel it everywhere. Your goal to ${formData.goal.toLowerCase()} requires both inner work and strategic action. Let's explore how leadership coaching can help you step into your authentic power.`,
-      
-      default: `${formData.name}, thank you for your vulnerability in sharing your story. Your goal to ${formData.goal.toLowerCase()} is absolutely achievable. Based on your responses, I believe you would benefit most from a combination of individual coaching and our transformation workshops. Let's schedule a virtual coffee to create your personalized path forward.`
+      individual: "individual coaching sessions where we'll work together to unlock your potential",
+      corporate: "corporate culture strategy to transform your organization from the inside out",
+      speaking: "speaking engagement that will inspire and equip your audience with practical tools",
+      relationship: "relationship coaching to help you build the connections you deserve",
+      book: "book study and coaching combination for deep personal transformation"
     };
 
-    let responseType = "default";
-    if (formData.challenge.toLowerCase().includes("relationship") || formData.challenge.toLowerCase().includes("family")) {
-      responseType = "relationships";
-    } else if (formData.challenge.toLowerCase().includes("career") || formData.challenge.toLowerCase().includes("work")) {
-      responseType = "career";
-    } else if (formData.challenge.toLowerCase().includes("trauma") || formData.challenge.toLowerCase().includes("heal")) {
-      responseType = "healing";
-    }
+    return `Hi ${data.name}! 
 
-    setAiResponse(responses[responseType as keyof typeof responses]);
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+Thank you for sharing your heart with me. I can feel the courage it took to reach out, and I want you to know that what you're experiencing with ${data.currentSituation.toLowerCase()} is more common than you might think.
+
+Your vision of ${data.desiredOutcome.toLowerCase()} shows incredible self-awareness and hope. This kind of clarity is often the first sign that you're ready for real transformation.
+
+Based on what you've shared, I believe ${responses[data.supportType as keyof typeof responses]} could be exactly what you need right now.
+
+Here's what I'm sending to your email immediately:
+✨ A personalized roadmap for your specific situation
+✨ My "Emotional Safety Checklist" - a tool I use with all my clients
+✨ Access to my private online community of fellow transformers
+✨ A free chapter from "Burned, Blocked & Better Than Ever"
+
+Remember: You don't have to have it all figured out to take the next step. You just need to be willing to begin.
+
+The fact that you're here, asking these questions, tells me you're already further along than you think. 
+
+Let's hop on a free discovery call so I can learn more about your unique situation and see how I can best support your journey.`;
   };
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  const handleReset = () => {
+    setFormData({
+      name: "",
+      email: "",
+      currentSituation: "",
+      desiredOutcome: "",
+      supportType: "individual"
+    });
+    setSubmitted(false);
+    setPersonalizedResponse("");
   };
-
-  if (isSubmitted) {
-    return (
-      <section id="transform" className="py-20 bg-gradient-to-br from-jw-accent/5 via-white to-jw-accent3/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Card className="p-8 text-center shadow-xl bg-gradient-to-br from-white to-jw-accent/5">
-              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Your Transformation Journey Begins Now
-              </h2>
-              
-              <div className="bg-gradient-to-r from-jw-accent4/5 to-jw-accent3/5 rounded-lg p-6 mb-8">
-                <h3 className="font-bold text-gray-900 mb-3 flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-jw-accent2 mr-2" />
-                  Your Personalized Insight
-                </h3>
-                <p className="text-gray-700 leading-relaxed italic">{aiResponse}</p>
-              </div>
-              
-              <div className="space-y-4">
-                <Button 
-                  onClick={() => window.open("https://calendly.com/joniwoods/virtual-coffee", "_blank")}
-                  size="lg"
-                  className="bg-jw-accent hover:bg-jw-accent/90 w-full sm:w-auto"
-                >
-                  <Heart className="w-5 h-5 mr-2" />
-                  Schedule Your Virtual Coffee
-                </Button>
-                
-                <p className="text-gray-600 text-sm">
-                  I'll personally review your responses and come prepared with specific 
-                  recommendations for your unique situation.
-                </p>
-              </div>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-    );
-  }
 
   return (
-    <section id="transform" className="py-20 bg-gradient-to-br from-jw-accent/5 via-white to-jw-accent3/5">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <Badge variant="secondary" className="mb-4">
-            Start Your Journey
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Your <span className="text-jw-accent">Transformation</span> Assessment
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Share your story with me, and I'll provide personalized insights and recommendations 
-            for your unique journey. This is your first step toward breakthrough.
-          </p>
-        </motion.div>
+    <section id="transform" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
+      <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+          Get Your Free{" "}
+          <span className="gradient-text">
+            Transformation
+          </span>{" "}
+          Roadmap
+        </h2>
+        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          Tell me about your situation and I'll send you personalized insights and resources to begin your healing journey.
+        </p>
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          <Card className="p-8 shadow-xl">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="name">Your Name *</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => handleInputChange("name", e.target.value)}
-                    placeholder="What should I call you?"
+      <div className="mx-auto max-w-[58rem]">
+        {!submitted ? (
+          <Card>
+            <CardContent className="p-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Your Name *</Label>
+                    <Input
+                      id="name"
+                      placeholder="Enter your name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Your Email *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="your.email@example.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required
+                    />
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="situation">What's your current situation? *</Label>
+                  <Textarea
+                    id="situation"
+                    placeholder="Share what's happening in your life right now... navigating divorce, feeling stuck in relationships, workplace conflict, seeking purpose, healing from trauma, etc."
+                    value={formData.currentSituation}
+                    onChange={(e) => setFormData({ ...formData, currentSituation: e.target.value })}
                     required
-                    className="mt-1"
+                    rows={4}
                   />
                 </div>
                 
-                <div>
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
-                    placeholder="your@email.com"
+                <div className="space-y-2">
+                  <Label htmlFor="outcome">What's your desired outcome? *</Label>
+                  <Textarea
+                    id="outcome"
+                    placeholder="Describe where you want to be... emotionally healthy relationships, confidence in who you are, peace with your past, strong leadership skills, healed family dynamics, etc."
+                    value={formData.desiredOutcome}
+                    onChange={(e) => setFormData({ ...formData, desiredOutcome: e.target.value })}
                     required
-                    className="mt-1"
+                    rows={4}
                   />
                 </div>
-              </div>
-
-              <div>
-                <Label htmlFor="challenge">What's your biggest challenge right now? *</Label>
-                <Textarea
-                  id="challenge"
-                  value={formData.challenge}
-                  onChange={(e) => handleInputChange("challenge", e.target.value)}
-                  placeholder="Share what's been weighing on your heart... (e.g., relationship patterns, career stagnation, family dynamics, personal healing)"
-                  required
-                  className="mt-1 min-h-[100px]"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="goal">What would transformation look like for you? *</Label>
-                <Textarea
-                  id="goal"
-                  value={formData.goal}
-                  onChange={(e) => handleInputChange("goal", e.target.value)}
-                  placeholder="Paint me a picture of your ideal future... (e.g., healthy relationships, authentic career, healed family patterns)"
-                  required
-                  className="mt-1 min-h-[100px]"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label>When do you want to see change? *</Label>
-                  <Select onValueChange={(value) => handleInputChange("timeframe", value)} required>
-                    <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Select timeframe" />
+                
+                <div className="space-y-2">
+                  <Label htmlFor="support">What type of support interests you most?</Label>
+                  <Select value={formData.supportType} onValueChange={(value) => setFormData({ ...formData, supportType: value })}>
+                    <SelectTrigger>
+                      <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="asap">I'm ready now - as soon as possible</SelectItem>
-                      <SelectItem value="3months">Within 3 months</SelectItem>
-                      <SelectItem value="6months">Within 6 months</SelectItem>
-                      <SelectItem value="1year">This year</SelectItem>
-                      <SelectItem value="exploring">Just exploring options</SelectItem>
+                      <SelectItem value="individual">Individual Coaching</SelectItem>
+                      <SelectItem value="corporate">Corporate Culture Strategy</SelectItem>
+                      <SelectItem value="speaking">Speaking & Workshops</SelectItem>
+                      <SelectItem value="relationship">Relationship Coaching</SelectItem>
+                      <SelectItem value="book">Book Study & Coaching</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-
-                <div>
-                  <Label>Your experience with personal development:</Label>
-                  <Select onValueChange={(value) => handleInputChange("experience", value)}>
-                    <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Select experience level" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="new">New to this journey</SelectItem>
-                      <SelectItem value="some">Some therapy/coaching experience</SelectItem>
-                      <SelectItem value="experienced">Experienced with personal work</SelectItem>
-                      <SelectItem value="advanced">Advanced - ready for deep work</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-
-              <div>
-                <Label htmlFor="message">Is there anything else you want me to know?</Label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => handleInputChange("message", e.target.value)}
-                  placeholder="Any additional context, questions, or specific areas you'd like to focus on..."
-                  className="mt-1"
-                />
-              </div>
-
-              <div className="text-center pt-4">
-                <Button
-                  type="submit"
-                  disabled={isSubmitting || !formData.name || !formData.email || !formData.challenge || !formData.goal || !formData.timeframe}
-                  size="lg"
-                  className="bg-jw-accent hover:bg-jw-accent/90 px-8"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Sparkles className="w-5 h-5 mr-2 animate-spin" />
-                      Creating Your Assessment...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Get My Personalized Insights
-                    </>
-                  )}
+                
+                <Button type="submit" className="w-full bg-jw-burgundy hover:bg-jw-rust" size="lg" disabled={loading}>
+                  {loading ? "Creating Your Personalized Roadmap..." : "Get My Free Transformation Roadmap →"}
                 </Button>
-                
-                <p className="text-sm text-gray-600 mt-4">
-                  Your information is kept completely confidential. I personally review every submission.
-                </p>
+              </form>
+            </CardContent>
+          </Card>
+        ) : (
+          <Card className="border-jw-burgundy/20 bg-jw-burgundy/5">
+            <CardHeader className="text-center">
+              <div className="text-6xl mb-4">✨</div>
+              <CardTitle className="text-jw-burgundy text-2xl">Your Personalized Transformation Roadmap Is Ready!</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Card className="mb-6">
+                <CardContent className="p-4">
+                  <pre className="whitespace-pre-wrap text-sm text-muted-foreground leading-relaxed font-sans">
+                    {personalizedResponse}
+                  </pre>
+                </CardContent>
+              </Card>
+              <CardDescription className="text-center mb-6">
+                📧 Check your email - I've sent this roadmap plus your free resources!
+              </CardDescription>
+              <div className="flex gap-2 justify-center">
+                <Button variant="outline" onClick={handleReset}>
+                  Ask Another Question
+                </Button>
+                <Button asChild className="bg-jw-burgundy hover:bg-jw-rust">
+                  <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+                    Book Discovery Call
+                  </Link>
+                </Button>
               </div>
-            </form>
+            </CardContent>
           </Card>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="mt-12 grid md:grid-cols-3 gap-6"
-        >
-          <Card className="p-6 text-center bg-gradient-to-br from-jw-accent/5 to-white">
-            <Target className="w-8 h-8 text-jw-accent mx-auto mb-3" />
-            <h3 className="font-bold text-gray-900 mb-2">Personalized</h3>
-            <p className="text-sm text-gray-600">Every response is customized to your unique situation and goals</p>
-          </Card>
-          
-          <Card className="p-6 text-center bg-gradient-to-br from-jw-accent2/5 to-white">
-            <Heart className="w-8 h-8 text-jw-accent2 mx-auto mb-3" />
-            <h3 className="font-bold text-gray-900 mb-2">Confidential</h3>
-            <p className="text-sm text-gray-600">Your story is safe with me - complete privacy guaranteed</p>
-          </Card>
-          
-          <Card className="p-6 text-center bg-gradient-to-br from-jw-accent3/5 to-white">
-            <Sparkles className="w-8 h-8 text-jw-accent3 mx-auto mb-3" />
-            <h3 className="font-bold text-gray-900 mb-2">Actionable</h3>
-            <p className="text-sm text-gray-600">Get specific next steps and recommendations you can act on today</p>
-          </Card>
-        </motion.div>
+        )}
       </div>
     </section>
   );

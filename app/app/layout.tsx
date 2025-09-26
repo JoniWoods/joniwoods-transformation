@@ -6,15 +6,24 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Joni Woods - Healing is messy. But so is becoming whole.",
-  description: "Transform your pain into power. Break generational patterns. Create the future you deserve. Trusted by 10,000+ individuals on their transformation journey.",
-  keywords: "transformation coach, healing, human connection, culture specialist, coaching, workshops, conflict resolution",
+  title: "Joni Woods - Burned, Blocked, and Better Than Ever",
+  description: "A raw, faith-rooted memoir of divorce, self-discovery, and the healing that begins when you stop pretending you're fine.",
+  keywords: "Joni Woods, healing, divorce recovery, self-discovery, relationship coach, emotional intelligence",
   authors: [{ name: "Joni Woods" }],
   openGraph: {
-    title: "Joni Woods - Healing is messy. But so is becoming whole.",
+    title: "Joni Woods - Burned, Blocked, and Better Than Ever",
     description: "Transform your pain into power. Break generational patterns. Create the future you deserve.",
-    type: "website",
+    url: "https://joniwoods.com",
+    siteName: "Joni Woods",
+    images: [
+      {
+        url: "/images/JoniWoods_logo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
     locale: "en_US",
+    type: "website",
   },
 };
 
