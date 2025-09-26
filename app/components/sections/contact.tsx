@@ -117,7 +117,7 @@ export function Contact() {
                     </Link>
                     
                     <Link 
-                      href="https://www.youtube.com/@joniwoods7141" 
+                      href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" 
                       target="_blank"
                       className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >

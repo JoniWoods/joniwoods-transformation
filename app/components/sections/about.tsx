@@ -54,7 +54,7 @@ export function About() {
                 className="bg-jw-burgundy text-white border-2 border-jw-burgundy/80 hover:bg-transparent hover:text-jw-burgundy hover:border-jw-burgundy" 
                 asChild
               >
-                <Link href="https://www.youtube.com/@joniwoods7141" target="_blank">
+                <Link href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" target="_blank">
                   YouTube Channel
                 </Link>
               </Button>

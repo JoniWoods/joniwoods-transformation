@@ -105,7 +105,7 @@ export function Blog() {
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="https://www.youtube.com/@joniwoods7141" target="_blank">
+            <Link href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" target="_blank">
               YouTube Channel
             </Link>
           </Button>

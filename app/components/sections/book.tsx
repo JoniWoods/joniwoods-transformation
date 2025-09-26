@@ -18,9 +18,11 @@ export function Book() {
                 className="object-contain"
               />
             </div>
-            <Badge className="bg-jw-yellow text-jw-charcoal">
-              Available Now on All Platforms
-            </Badge>
+            <Link href="https://books2read.com/u/mq2K7v" target="_blank">
+              <Badge className="bg-jw-yellow text-jw-charcoal hover:bg-jw-yellow-light cursor-pointer transition-colors">
+                Available on All Platforms
+              </Badge>
+            </Link>
           </div>
         </div>
         
@@ -74,7 +76,7 @@ export function Book() {
               
               <div className="flex gap-2">
                 <Button asChild className="bg-jw-burgundy hover:bg-jw-rust">
-                  <Link href="https://books2read.com/u/mq2K7v" target="_blank">
+                  <Link href="https://a.co/d/67tuSAW" target="_blank">
                     Buy Now
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -82,7 +84,7 @@ export function Book() {
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link href="http://journeylifecoaching.life" target="_blank">
+                  <Link href="/Joni Woods Media Kit_Final.pdf" target="_blank">
                     Read Preview
                   </Link>
                 </Button>
