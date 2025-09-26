@@ -18,11 +18,11 @@ export default function HomePage() {
       <Navigation />
       <main>
         <Hero />
-        <TransformationForm />
-        <About />
-        <Book />
-        <Services />
         <MediaAppearances />
+        <TransformationForm />
+        <Book />
+        <About />
+        <Services />
         <Testimonials />
         <Blog />
         <Contact />

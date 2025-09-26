@@ -8,7 +8,7 @@ export function Hero() {
     <section 
       className="w-full space-y-6 pb-8 pt-24 md:pb-12 md:pt-32 lg:py-40 relative bg-black"
       style={{
-        backgroundImage: 'url(/images/hero/Website Hero Image.png)',
+        backgroundImage: 'url(/images/hero/JoniWoodsWebsite_Hero.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'

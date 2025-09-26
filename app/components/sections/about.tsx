@@ -10,7 +10,7 @@ export function About() {
       <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
         {/* Image first, then Meet Joni Woods, then Professional Highlights */}
         <div className="flex flex-col gap-4 order-1 sm:order-2">
-          <div className="relative aspect-square rounded-lg overflow-hidden">
+          <div className="relative aspect-[3/4] rounded-lg overflow-hidden max-w-sm mx-auto">
             <Image
               src="/images/Joni_Woods_Author_Portrait-1.jpg"
               alt="Joni Woods - Author and Life Coach"
@@ -76,12 +76,12 @@ export function About() {
         </div>
       </div>
       
-      {/* Professional Highlights section - full width */}
+      {/* Professional Highlights section - now positioned to fit better under the author photo */}
       <div className="mx-auto max-w-[64rem]">
         <Card>
           <CardContent className="p-6">
             <h3 className="text-xl font-semibold mb-4 text-center">Professional Highlights</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="flex items-start space-x-3">
                 <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
                 <p className="text-sm text-muted-foreground/80">
@@ -103,13 +103,19 @@ export function About() {
               <div className="flex items-start space-x-3">
                 <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
                 <p className="text-sm text-muted-foreground/80">
-                  Former youth & young adult pastor
+                  Certified Life Coach (CLC) & Culture Strategist
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
                 <p className="text-sm text-muted-foreground/80">
-                  Mother to Ashton and Scarlett
+                  Community leader in Ann Arbor, Michigan
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                <p className="text-sm text-muted-foreground/80">
+                  Specializes in relational healing & boundary setting
                 </p>
               </div>
             </div>
