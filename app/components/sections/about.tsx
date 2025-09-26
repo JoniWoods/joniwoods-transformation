@@ -7,9 +7,21 @@ import Link from "next/link";
 export function About() {
   return (
     <section id="about" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
-      <div className="mx-auto grid justify-center gap-6 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
-        {/* Text content on the left */}
-        <div className="relative overflow-hidden rounded-lg border bg-background p-2 order-1">
+      <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
+        {/* Image first, then Meet Joni Woods, then Professional Highlights */}
+        <div className="flex flex-col gap-4 order-1 sm:order-2">
+          <div className="relative aspect-[3/4] rounded-lg overflow-hidden max-w-sm mx-auto">
+            <Image
+              src="/images/Joni_Woods_Author_Portrait-1.jpg"
+              alt="Joni Woods - Author and Life Coach"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Meet Joni Woods Text content */}
+        <div className="relative overflow-hidden rounded-lg border bg-background p-2 order-2 sm:order-1">
           <div className="flex flex-col justify-between rounded-md p-6">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -62,57 +74,53 @@ export function About() {
             </div>
           </div>
         </div>
-
-        {/* Image and Professional Highlights on the right */}
-        <div className="flex flex-col gap-4 order-2">
-          <div className="relative aspect-[3/4] rounded-lg overflow-hidden max-w-sm mx-auto">
-            <Image
-              src="/images/Joni_Woods_Author_Portrait-1.jpg"
-              alt="Joni Woods - Author and Life Coach"
-              fill
-              className="object-cover"
-            />
-          </div>
-          
-          {/* Professional Highlights card directly under the photo */}
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4 text-center">Professional Highlights</h3>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground/80">
-                    15+ years in communication & emotional intelligence
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground/80">
-                    Fortune 500 consultant & corporate speaker
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground/80">
-                    Author of "Burned, Blocked, and Better Than Ever"
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground/80">
-                    Former youth & young adult pastor
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
-                  <p className="text-sm text-muted-foreground/80">
-                    Mother to Ashton and Scarlett
-                  </p>
-                </div>
+      </div>
+      
+      {/* Professional Highlights section - now positioned to fit better under the author photo */}
+      <div className="mx-auto max-w-[64rem]">
+        <Card>
+          <CardContent className="p-6">
+            <h3 className="text-xl font-semibold mb-4 text-center">Professional Highlights</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="flex items-start space-x-3">
+                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                <p className="text-sm text-muted-foreground/80">
+                  15+ years in communication & emotional intelligence
+                </p>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+              <div className="flex items-start space-x-3">
+                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                <p className="text-sm text-muted-foreground/80">
+                  Fortune 500 consultant & keynote speaker
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                <p className="text-sm text-muted-foreground/80">
+                  Author of "Burned, Blocked, and Better Than Ever"
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                <p className="text-sm text-muted-foreground/80">
+                  Certified Life Coach (CLC) & Culture Strategist
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                <p className="text-sm text-muted-foreground/80">
+                  Community leader in Ann Arbor, Michigan
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="mt-2 h-2 w-2 rounded-full bg-jw-burgundy flex-shrink-0" />
+                <p className="text-sm text-muted-foreground/80">
+                  Specializes in relational healing & boundary setting
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

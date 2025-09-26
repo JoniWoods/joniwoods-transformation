@@ -24,7 +24,7 @@ export function Hero() {
         <h1 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white">
           Burned, Blocked &
           <br />
-          <span className="gradient-text-blue">
+          <span className="text-white">
             Better Than Ever
           </span>
         </h1>
@@ -55,8 +55,8 @@ export function Hero() {
             Certified Life Coach • Culture Strategist • Keynote Speaker • Author
           </p>
           <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="outline" className="text-white border-white/60 bg-white/10">15+ Years Experience</Badge>
-            <Badge variant="outline" className="text-white border-white/60 bg-white/10">Fortune 500 Consultant</Badge>
+            <Badge variant="outline" className="text-white border-jw-blue bg-jw-blue/30">15+ Years Experience</Badge>
+            <Badge variant="outline" className="text-white border-jw-blue bg-jw-blue/30">Fortune 500 Consultant</Badge>
           </div>
         </div>
       </div>
