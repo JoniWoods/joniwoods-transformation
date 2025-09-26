@@ -7,22 +7,10 @@ import Link from "next/link";
 export function About() {
   return (
     <section id="about" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
-      <div className="mx-auto grid justify-center gap-6 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
+      <div className="mx-auto grid justify-center gap-6 grid-cols-1 md:grid-cols-2 md:max-w-[64rem]">
         
-        {/* Mobile: Image above text, Desktop: Image on right */}
-        <div className="flex flex-col gap-4 order-1 sm:order-2">
-          <div className="relative aspect-[3/4] rounded-lg overflow-hidden max-w-sm mx-auto">
-            <Image
-              src="/images/Joni_Woods_Author_Portrait-1.jpg"
-              alt="Joni Woods - Author and Life Coach"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Text content - Mobile: below image, Desktop: left side */}
-        <div className="relative overflow-hidden rounded-lg border bg-background p-2 order-2 sm:order-1">
+        {/* Text content - Left side on desktop, below image on mobile */}
+        <div className="relative overflow-hidden rounded-lg border bg-background p-2 order-2 md:order-1">
           <div className="flex flex-col justify-between rounded-md p-6">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -73,6 +61,17 @@ export function About() {
                 </Link>
               </Button>
             </div>
+          </div>
+        </div>
+        
+        {/* Image - Right side on desktop, above text on mobile */}
+        <div className="flex flex-col gap-4 order-1 md:order-2">
+          <div className="rounded-lg overflow-hidden max-w-sm mx-auto">
+            <img
+              src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
+              alt="Joni Woods - Author and Life Coach"
+              className="w-full h-auto object-cover rounded-lg"
+            />
           </div>
         </div>
       </div>
