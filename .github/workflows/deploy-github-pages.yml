@@ -72,7 +72,9 @@ jobs:
               ignoreBuildErrors: false,
             },
             images: { 
-              unoptimized: true
+              unoptimized: true,
+              loader: 'custom',
+              loaderFile: './lib/imageLoader.js'
             },
           };
           
@@ -85,6 +87,10 @@ jobs:
           yarn build
           echo "=== Build completed, checking output ==="
           ls -la out/ || echo "No out directory found"
+          echo "=== Ensuring all public assets are copied ==="
+          cp -r public/* out/ 2>/dev/null || echo "No additional public files to copy"
+          echo "=== Final output structure ==="
+          find out/ -type f -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" | head -10
       
       - name: Add .nojekyll file
         run: |
