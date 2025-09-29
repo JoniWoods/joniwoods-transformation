@@ -39,13 +39,46 @@ jobs:
           cd app
           yarn install --frozen-lockfile
       
+      - name: Create GitHub Pages next.config.js
+        run: |
+          cd app
+          cp next.config.js next.config.js.backup
+          cat > next.config.js << 'EOF'
+          const path = require('path');
+          
+          /** @type {import('next').NextConfig} */
+          const nextConfig = {
+            distDir: process.env.NEXT_DIST_DIR || '.next',
+            output: 'export',
+            basePath: '/joniwoods-transformation',
+            assetPrefix: '/joniwoods-transformation/',
+            trailingSlash: true,
+            experimental: {
+              outputFileTracingRoot: path.join(__dirname, '../'),
+            },
+            eslint: {
+              ignoreDuringBuilds: true,
+            },
+            typescript: {
+              ignoreBuildErrors: false,
+            },
+            images: { 
+              unoptimized: true
+            },
+          };
+          
+          module.exports = nextConfig;
+          EOF
+      
       - name: Build with Next.js
         run: |
           cd app
           yarn build
-        env:
-          NEXT_OUTPUT_MODE: export
-          GITHUB_PAGES: true
+      
+      - name: Add .nojekyll file
+        run: |
+          cd app
+          touch out/.nojekyll
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
