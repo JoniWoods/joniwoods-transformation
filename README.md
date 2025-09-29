@@ -1,96 +1,64 @@
 
-# Joni Woods - Transformation Website
+# Joni Woods - Static Website
 
-A modern, responsive website built with Next.js, featuring Joni Woods' transformation programs, book information, and coaching services.
+A beautiful, professional website for Joni Woods' book and coaching services, converted to static HTML for reliable deployment and lightning-fast performance.
 
 ## 🌟 Features
 
-- **Modern Design**: Clean, professional layout with beautiful gradients and animations
-- **Responsive**: Optimized for all devices (desktop, tablet, mobile)
-- **Performance**: Built with Next.js for fast loading and SEO optimization
-- **Interactive Elements**: Smooth scrolling, hover effects, and interactive components
-- **Content Sections**:
-  - Hero section with transformation programs
-  - About Joni Woods with professional highlights
-  - Recent media appearances
-  - Book information and purchase links
-  - Testimonials
-  - Contact form
-  - Latest blog articles
+- 📖 **Book Promotion**: "Burned, Blocked, and Better Than Ever" showcase
+- 👤 **About Section**: Professional bio with highlights positioned under author photo
+- 📝 **Blog Integration**: Links to real articles on Journey Life Coaching
+- 📞 **Contact Integration**: Calendly booking and social media links
+- 📱 **Fully Responsive**: Perfect display on all devices
+- 🎨 **Custom Branding**: Joni's signature color palette (burgundy, rust, yellow, blue)
+- ⚡ **Lightning Fast**: Pure HTML/CSS for instant loading
+- 🔒 **Reliable**: No build dependencies or deployment issues
 
-## 🚀 Tech Stack
+## 🚀 Live Sites
 
-- **Framework**: Next.js 14
-- **Styling**: Tailwind CSS
-- **UI Components**: Radix UI + Custom Components
-- **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **Forms**: React Hook Form + Zod validation
-- **Language**: TypeScript
+- **GitHub Pages**: https://joniwoods.github.io/joniwoods-transformation/
+- **Abacus.AI**: https://joniwoods.abacusai.app/
 
-## 📦 Deployment
+Both versions look **identical** and showcase the complete Joni Woods transformation website.
 
-This website is configured for deployment to GitHub Pages using GitHub Actions.
-
-### Automatic Deployment
-
-1. Push changes to the `main` branch
-2. GitHub Actions will automatically build and deploy the site
-3. The site will be available at `https://[username].github.io/joniwoods-transformation`
-
-### Manual Deployment
-
-To build the static files locally:
-
-```bash
-cd app
-NEXT_OUTPUT_MODE=export NODE_ENV=production yarn build
-```
-
-The static files will be generated in the `app/out` directory.
-
-## 🛠️ Development
-
-To run the development server:
-
-```bash
-cd app
-yarn install
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## 📁 Project Structure
+## 📁 File Structure
 
 ```
-joniwoods-transformation/
-├── app/
-│   ├── app/
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── components/
-│   │   ├── sections/
-│   │   │   ├── hero.tsx
-│   │   │   ├── about.tsx
-│   │   │   ├── media-appearances.tsx
-│   │   │   ├── services.tsx
-│   │   │   ├── book.tsx
-│   │   │   ├── testimonials.tsx
-│   │   │   ├── blog.tsx
-│   │   │   ├── contact.tsx
-│   │   │   └── footer.tsx
-│   │   ├── ui/
-│   │   └── navigation.tsx
-│   ├── lib/
-│   └── public/
-│       └── images/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-└── README.md
+/
+├── index.html          # Main website file
+├── styles.css          # Compiled Tailwind CSS
+├── images/            # All images and media
+│   ├── hero/          # Hero background images
+│   ├── media-appearances/  # Podcast/media images
+│   ├── JoniWoods_logo.png
+│   ├── Joni_Woods_Author_Portrait-1.jpg
+│   └── Woods_FrontCover_3D.png
+├── fonts/             # Custom fonts
+└── static-html-site/  # Development backup
 ```
+
+## 🎯 Sections Included
+
+1. **Navigation** - Smooth scroll to sections
+2. **Hero** - Book announcement with hero image
+3. **Media Appearances** - Recent podcast features
+4. **Transformation Form** - Call-to-action section
+5. **Book Section** - Detailed book information
+6. **About** - Professional bio with highlights under author photo
+7. **Services** - Coaching programs (Individual, Corporate, Speaking, Relationship)
+8. **Testimonials** - Client success stories
+9. **Blog** - Latest articles
+10. **Contact** - Multiple contact methods
+11. **Footer** - Links and social media
+
+## 🛠 Technical Details
+
+- **Pure HTML/CSS/JS** - No build process required
+- **Tailwind CSS** - Pre-compiled for optimal performance
+- **Custom Fonts** - Myriad Pro family loaded locally
+- **Optimized Images** - All formats supported (PNG, JPG, WebP)
+- **Mobile-First** - Responsive design principles
+- **Cross-Browser** - Works in all modern browsers
 
 ## 📝 License
 
