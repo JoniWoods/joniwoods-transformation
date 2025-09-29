@@ -5,22 +5,25 @@ import Image from "next/image";
 
 const appearances = [
   {
-    title: "Imagine Better Podcast",
-    description: "The Power of Self-Awareness",
-    image: "/images/media-appearances/The Power of Self-Awareness.webp",
-    category: "Podcast"
+    title: "Newest with Jason Tracey",
+    description: "Burned, Blocked, & Better Than Ever w/ Joni Woods",
+    image: "/images/media-appearances/podcast1.jpeg",
+    category: "Podcast",
+    url: "https://youtu.be/B8vZcNDvv48"
   },
   {
-    title: "Women's Money Wisdom",
-    description: "Healthy Communication About Money with Relationships",
-    image: "/images/media-appearances/Healthy Communication about Money with Relationship.png",
-    category: "Podcast"
+    title: "Special Guest Interview",
+    description: "Broken to Better than Ever with Special Guest Joni Woods",
+    image: "/images/media-appearances/podcast2.jpeg",
+    category: "Podcast",
+    url: "https://youtu.be/bi12wJllQoE"
   },
   {
-    title: "Financial Success Show",
-    description: "Creating The Future You Want",
-    image: "/images/media-appearances/How Successful People Create The Future They Want.png",
-    category: "Podcast"
+    title: "Destination Ann Arbor",
+    description: "Workshop",
+    image: "/images/media-appearances/podcast3.jpeg",
+    category: "Workshop",
+    url: "https://youtu.be/sPUDaTnnAz0"
   }
 ];
 
@@ -41,29 +44,31 @@ export function MediaAppearances() {
       
       <div className="mx-auto grid justify-center gap-6 sm:grid-cols-1 md:max-w-[76rem] md:grid-cols-3">
         {appearances.map((appearance, index) => (
-          <Card key={index} className="group cursor-pointer transition-all hover:scale-105 h-full flex flex-col">
-            <div className="relative aspect-video bg-muted rounded-t-lg overflow-hidden">
-              <Image
-                src={appearance.image}
-                alt={`${appearance.title} - ${appearance.description}`}
-                fill
-                className="object-cover transition-transform group-hover:scale-110"
-              />
-            </div>
-            <CardHeader className="flex-none">
-              <Badge variant="outline" className="w-fit mb-2">
-                {appearance.category}
-              </Badge>
-              <CardTitle className="group-hover:text-jw-burgundy transition-colors text-lg">
-                {appearance.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1">
-              <CardDescription>
-                {appearance.description}
-              </CardDescription>
-            </CardContent>
-          </Card>
+          <a key={index} href={appearance.url} target="_blank" rel="noopener noreferrer">
+            <Card className="group cursor-pointer transition-all hover:scale-105 h-full flex flex-col">
+              <div className="relative aspect-video bg-muted rounded-t-lg overflow-hidden">
+                <Image
+                  src={appearance.image}
+                  alt={`${appearance.title} - ${appearance.description}`}
+                  fill
+                  className="object-cover transition-transform group-hover:scale-110"
+                />
+              </div>
+              <CardHeader className="flex-none">
+                <Badge variant="outline" className="w-fit mb-2">
+                  {appearance.category}
+                </Badge>
+                <CardTitle className="group-hover:text-jw-burgundy transition-colors text-lg">
+                  {appearance.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1">
+                <CardDescription>
+                  {appearance.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </a>
         ))}
       </div>
     </section>

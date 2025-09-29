@@ -113,8 +113,13 @@ export function Blog() {
             </Link>
           </Button>
           <Button asChild className="bg-jw-burgundy text-white border-2 border-jw-burgundy/80 hover:bg-transparent hover:text-jw-burgundy hover:border-jw-burgundy">
+            <Link href="mailto:joni@journeylifecoaching.life?subject=Blog Subscription Request&body=Hi Joni,%0D%0A%0D%0AI'd like to subscribe to your blog updates.%0D%0A%0D%0AThank you!" target="_blank">
+              Subscribe to Blog
+            </Link>
+          </Button>
+          <Button asChild className="bg-jw-yellow text-jw-charcoal hover:bg-jw-yellow/80">
             <Link href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" target="_blank">
-              Subscribe
+              YouTube Subscribe
             </Link>
           </Button>
         </div>

@@ -5,9 +5,14 @@ import Link from "next/link";
 
 const testimonials = [
   {
-    quote: "Joni Woods takes care. She takes care of those around her, and if you're in that circle, lucky you! Her emotionally intelligent conversation includes both thoughtful questions and the space to respond.",
-    author: "Jennifer Martinez",
-    role: "Weber's Restaurant"
+    quote: "Joni is a one of a kind. She has the sweetest smile and an even sweeter soul. She looks for the best in everyone even when they don't see it in themselves. She helps you explore your own options instead of telling you what to do. She makes you notice how you're feeling and works that into your healing process.",
+    author: "Emma Pechota",
+    role: "The Eagle"
+  },
+  {
+    quote: "During her session, Joni provided valuable insights on Effective Communication. She emphasized the importance of pausing before responding, seeking evidence and utilizing phrases such as 'I noticed' and 'I observed'.",
+    author: "Workshop Attendee",
+    role: "Communication Workshop"
   },
   {
     quote: "Joni is a relationship coach that helped us build a stronger leadership team through formal training and one-on-one sessions. She is very good at what she does and was very helpful to us.",
@@ -20,19 +25,14 @@ const testimonials = [
     role: "Shelter Association of Washtenaw County"
   },
   {
-    quote: "Joni's approach to emotional intelligence training transformed our team dynamics. Her practical tools and genuine care created lasting change in how we communicate and support each other.",
-    author: "Corporate Client",
-    role: "Fortune 500 Company"
+    quote: "Joni emphasized the importance of listening and asking clarifying questions before jumping to conclusions. Very knowledgeable of topic with personal feedback throughout.",
+    author: "Workshop Participant",
+    role: "Professional Development Workshop"
   },
   {
     quote: "After divorce, I thought I was broken beyond repair. Joni helped me realize that healing isn't about becoming who I was before—it's about becoming who I'm meant to be.",
     author: "Individual Client",
     role: "Divorce Recovery Coaching"
-  },
-  {
-    quote: "Joni's book 'Burned, Blocked, and Better Than Ever' spoke directly to my soul. Her raw honesty about the healing journey gave me permission to stop pretending I was fine.",
-    author: "Reader",
-    role: "Book Review"
   }
 ];
 

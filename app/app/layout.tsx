@@ -34,7 +34,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Ensure page loads at the top
+              if (typeof window !== 'undefined') {
+                window.addEventListener('load', function() {
+                  window.scrollTo(0, 0);
+                });
+                // Also scroll to top on page navigation
+                document.addEventListener('DOMContentLoaded', function() {
+                  window.scrollTo(0, 0);
+                });
+              }
+            `,
+          }}
+        />
+      </body>
     </html>
   );
 }

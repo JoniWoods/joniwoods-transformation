@@ -38,7 +38,7 @@ export function Contact() {
                     <svg className="h-4 w-4 text-jw-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-sm">Heart-Centered, Faith-Rooted Approach</span>
+                    <span className="text-sm">Transforming Pain Into Power</span>
                   </div>
                 </div>
 
@@ -64,18 +64,6 @@ export function Contact() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3">Connect With Me</h3>
                   <div className="space-y-3">
-                    <Link 
-                      href="http://joniwoods.com" 
-                      target="_blank"
-                      className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-jw-burgundy/10">
-                        <svg className="h-4 w-4 text-jw-burgundy" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0z"/>
-                        </svg>
-                      </div>
-                      <span>joniwoods.com</span>
-                    </Link>
                     
                     <Link 
                       href="http://journeylifecoaching.life" 
