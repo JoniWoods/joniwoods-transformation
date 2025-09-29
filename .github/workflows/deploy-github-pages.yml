@@ -34,10 +34,19 @@ jobs:
         with:
           static_site_generator: next
       
+      - name: Debug file structure
+        run: |
+          echo "=== Project Structure ==="
+          ls -la
+          echo "=== App Directory ==="
+          ls -la app/
+          echo "=== Check package.json ==="
+          cat app/package.json | head -20
+      
       - name: Install dependencies
         run: |
           cd app
-          yarn install --frozen-lockfile
+          yarn install --network-timeout 100000
       
       - name: Create GitHub Pages next.config.js
         run: |
@@ -74,6 +83,8 @@ jobs:
         run: |
           cd app
           yarn build
+          echo "=== Build completed, checking output ==="
+          ls -la out/ || echo "No out directory found"
       
       - name: Add .nojekyll file
         run: |
