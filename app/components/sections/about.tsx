@@ -71,6 +71,7 @@ export function About() {
               src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
               alt="Joni Woods - Author and Life Coach"
               className="w-full h-full object-cover rounded-lg"
+              style={{ objectPosition: 'center center' }}
             />
           </div>
           
