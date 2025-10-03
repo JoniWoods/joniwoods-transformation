@@ -51,8 +51,8 @@ export function Hero() {
 
       {/* Desktop Layout - Side by Side */}
       <div className="hidden md:block">
-        <div className="container mx-auto px-6 py-12 lg:py-20">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="container mx-auto px-6 pt-6 pb-12 lg:pt-8 lg:pb-20">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left Column - Text Content */}
             <div className="flex flex-col space-y-6">
               <h1 className="font-heading text-3xl lg:text-4xl xl:text-5xl leading-tight text-jw-charcoal">
