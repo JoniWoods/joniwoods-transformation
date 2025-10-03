@@ -46,7 +46,7 @@ export function Testimonials() {
             Stories
           </span>
         </h2>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+        <p className="w-full px-4 leading-normal text-muted-foreground sm:text-lg sm:leading-7" style={{ textWrap: 'balance' }}>
           Real stories from individuals, couples, and organizations who chose healing over staying stuck.
         </p>
       </div>
