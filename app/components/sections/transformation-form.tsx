@@ -72,8 +72,6 @@ Based on your interest in ${responses[data.supportType as keyof typeof responses
 Here's what I'm sending to your email immediately:
 ✨ A personalized roadmap for your transformation journey
 ✨ My "Emotional Safety Checklist" - a tool I use with all my clients
-✨ Access to my private online community of fellow transformers
-✨ A free chapter from "Burned, Blocked & Better Than Ever"
 
 Remember: You don't have to have it all figured out to take the next step. You just need to be willing to begin.
 
