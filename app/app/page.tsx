@@ -22,8 +22,8 @@ export default function HomePage() {
         <BookBanner />
         <Hero />
         <FeaturedIn />
-        <MediaAppearances />
         <TransformationForm />
+        <MediaAppearances />
         <Book />
         <About />
         <Services />

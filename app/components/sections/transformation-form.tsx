@@ -13,8 +13,6 @@ import Link from "next/link";
 interface FormData {
   name: string;
   email: string;
-  currentSituation: string;
-  desiredOutcome: string;
   supportType: string;
 }
 
@@ -22,8 +20,6 @@ export function TransformationForm() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    currentSituation: "",
-    desiredOutcome: "",
     supportType: "individual"
   });
   const [loading, setLoading] = useState(false);
@@ -34,13 +30,28 @@ export function TransformationForm() {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate personalized response generation
-    setTimeout(() => {
-      const response = generatePersonalizedResponse(formData);
-      setPersonalizedResponse(response);
-      setSubmitted(true);
+    try {
+      // Send form data to API
+      const response = await fetch('/api/transformation-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const personalizedMsg = generatePersonalizedResponse(formData);
+        setPersonalizedResponse(personalizedMsg);
+        setSubmitted(true);
+      } else {
+        alert('There was an error submitting the form. Please try again.');
+      }
+    } catch (error) {
+      alert('There was an error submitting the form. Please try again.');
+    } finally {
       setLoading(false);
-    }, 2000);
+    }
   };
 
   const generatePersonalizedResponse = (data: FormData) => {
@@ -54,21 +65,19 @@ export function TransformationForm() {
 
     return `Hi ${data.name}! 
 
-Thank you for sharing your heart with me. I can feel the courage it took to reach out, and I want you to know that what you're experiencing with ${data.currentSituation.toLowerCase()} is more common than you might think.
+Thank you for your interest in connecting! I'm excited to support you on your transformation journey.
 
-Your vision of ${data.desiredOutcome.toLowerCase()} shows incredible self-awareness and hope. This kind of clarity is often the first sign that you're ready for real transformation.
-
-Based on what you've shared, I believe ${responses[data.supportType as keyof typeof responses]} could be exactly what you need right now.
+Based on your interest in ${responses[data.supportType as keyof typeof responses]}, I believe we can create powerful change together.
 
 Here's what I'm sending to your email immediately:
-✨ A personalized roadmap for your specific situation
+✨ A personalized roadmap for your transformation journey
 ✨ My "Emotional Safety Checklist" - a tool I use with all my clients
 ✨ Access to my private online community of fellow transformers
 ✨ A free chapter from "Burned, Blocked & Better Than Ever"
 
 Remember: You don't have to have it all figured out to take the next step. You just need to be willing to begin.
 
-The fact that you're here, asking these questions, tells me you're already further along than you think. 
+The fact that you're here shows you're ready for real transformation.
 
 Let's hop on a free discovery call so I can learn more about your unique situation and see how I can best support your journey.`;
   };
@@ -77,8 +86,6 @@ Let's hop on a free discovery call so I can learn more about your unique situati
     setFormData({
       name: "",
       email: "",
-      currentSituation: "",
-      desiredOutcome: "",
       supportType: "individual"
     });
     setSubmitted(false);
@@ -127,30 +134,6 @@ Let's hop on a free discovery call so I can learn more about your unique situati
                       required
                     />
                   </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="situation">What's your current situation? *</Label>
-                  <Textarea
-                    id="situation"
-                    placeholder="Share what's happening in your life right now... navigating divorce, feeling stuck in relationships, workplace conflict, seeking purpose, healing from trauma, etc."
-                    value={formData.currentSituation}
-                    onChange={(e) => setFormData({ ...formData, currentSituation: e.target.value })}
-                    required
-                    rows={4}
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="outcome">What's your desired outcome? *</Label>
-                  <Textarea
-                    id="outcome"
-                    placeholder="Describe where you want to be... emotionally healthy relationships, confidence in who you are, peace with your past, strong leadership skills, healed family dynamics, etc."
-                    value={formData.desiredOutcome}
-                    onChange={(e) => setFormData({ ...formData, desiredOutcome: e.target.value })}
-                    required
-                    rows={4}
-                  />
                 </div>
                 
                 <div className="space-y-2">

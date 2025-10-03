@@ -103,7 +103,7 @@ export function Footer() {
             <h4 className="text-lg font-myriad-semibold text-jw-yellow mb-4">Connect</h4>
             <div className="flex space-x-4">
               <Link 
-                href="https://www.instagram.com/joniwoods" 
+                href="https://www.instagram.com/authorjoniwoods/" 
                 target="_blank"
                 className="text-jw-gray hover:text-jw-yellow-light transition-colors"
               >

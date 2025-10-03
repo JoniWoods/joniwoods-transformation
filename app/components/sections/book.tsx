@@ -71,7 +71,6 @@ export function Book() {
                 <Badge variant="outline">Paperback $17.99</Badge>
                 <Badge variant="outline">eBook $9.99</Badge>
                 <Badge variant="outline">Hardcover $27.99</Badge>
-                <Badge variant="outline">Audiobook Available</Badge>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-2 justify-center">

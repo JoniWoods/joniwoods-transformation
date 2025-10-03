@@ -15,7 +15,7 @@ export function Hero() {
             </h1>
             
             <p className="text-sm leading-relaxed text-jw-charcoal/80 max-w-md">
-              I'm Joni Woods — coach, speaker, and author of Burned, Blocked, and Better Than Ever. I help people move from survival mode into thriving lives by guiding them to rebuild trust in themselves, navigate difficult relationships, and embrace their most empowered, authentic self.
+              I'm Joni Woods — certified life coach, culture strategist, speaker, and author of Burned, Blocked, and Better Than Ever. I help people move from survival mode into thriving lives by guiding them to rebuild trust in themselves, navigate difficult relationships, and embrace their most empowered, authentic self.
             </p>
             
             <div className="flex flex-col gap-2 w-full max-w-xs pt-2">
@@ -33,22 +33,16 @@ export function Hero() {
                 </Link>
               </Button>
             </div>
-            
-            <div className="flex flex-col items-center space-y-2 pt-3">
-              <p className="text-xs text-jw-charcoal/70 font-medium">
-                Certified Life Coach • Culture Strategist • Keynote Speaker • Author
-              </p>
-            </div>
           </div>
         </div>
         
         {/* Mobile Hero Image */}
         <div className="w-full">
           <Image
-            src="/images/hero/JoniWoodsMobileHero.png"
+            src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
             alt="Joni Woods"
             width={600}
-            height={400}
+            height={800}
             className="w-full h-auto"
             priority
           />
@@ -66,7 +60,7 @@ export function Hero() {
               </h1>
               
               <p className="text-lg lg:text-xl leading-relaxed text-jw-charcoal/80 max-w-xl">
-                I'm Joni Woods — coach, speaker, and author of Burned, Blocked, and Better Than Ever. I help people move from survival mode into thriving lives by guiding them to rebuild trust in themselves, navigate difficult relationships, and embrace their most empowered, authentic self.
+                I'm Joni Woods — certified life coach, culture strategist, speaker, and author of Burned, Blocked, and Better Than Ever. I help people move from survival mode into thriving lives by guiding them to rebuild trust in themselves, navigate difficult relationships, and embrace their most empowered, authentic self.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -84,21 +78,15 @@ export function Hero() {
                   </Link>
                 </Button>
               </div>
-              
-              <div className="flex flex-col space-y-4 pt-6">
-                <p className="text-sm text-jw-charcoal/70 font-semibold">
-                  Certified Life Coach • Culture Strategist • Keynote Speaker • Author
-                </p>
-              </div>
             </div>
 
             {/* Right Column - Desktop Hero Image */}
             <div className="relative w-full">
               <Image
-                src="/images/hero/JoniWoodsDesktopHero.png"
+                src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
                 alt="Joni Woods"
                 width={800}
-                height={900}
+                height={1000}
                 className="w-full h-auto"
                 priority
               />
