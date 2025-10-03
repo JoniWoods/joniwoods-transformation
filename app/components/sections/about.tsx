@@ -68,7 +68,7 @@ export function About() {
         <div className="flex flex-col gap-4 order-1 md:order-2">
           <div className="rounded-lg overflow-hidden max-w-sm mx-auto h-auto md:h-[60vh]">
             <img
-              src="/images/hero/JoniWoodsDesktopHero.png"
+              src="/images/JoniWoods_SideView.webp"
               alt="Joni Woods - Author and Life Coach"
               className="w-full h-full object-cover rounded-lg"
               style={{ objectPosition: 'center center' }}
