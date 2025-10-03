@@ -1,6 +1,7 @@
 
 import { Navigation } from "@/components/navigation";
 import { Hero } from "@/components/sections/hero";
+import { FeaturedIn } from "@/components/sections/featured-in";
 import { MediaAppearances } from "@/components/sections/media-appearances";
 import { About } from "@/components/sections/about";
 import { Services } from "@/components/sections/services";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Navigation />
       <main>
         <Hero />
+        <FeaturedIn />
         <MediaAppearances />
         <TransformationForm />
         <Book />
