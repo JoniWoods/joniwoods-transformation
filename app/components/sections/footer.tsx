@@ -14,7 +14,7 @@ function TikTokIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="bg-gray-500/75 text-white">
+    <footer className="bg-[#8B2332] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Main Footer Content */}
