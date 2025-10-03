@@ -20,8 +20,8 @@ export function BookBanner() {
           />
         </div>
       </Link>
-      {/* 10px spacing below banner */}
-      <div className="h-[10px]" />
+      {/* Spacing below banner - 10px mobile, 3px desktop */}
+      <div className="h-[10px] md:h-[3px]" />
     </section>
   );
 }
