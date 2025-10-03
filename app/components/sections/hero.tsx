@@ -1,23 +1,15 @@
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="w-full bg-white pt-20 md:pt-24">
+    <section className="w-full bg-white">
       {/* Mobile Layout - Stacked */}
       <div className="md:hidden">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col items-center text-center space-y-3">
-            <Link href="https://books2read.com/u/mq2K7v" target="_blank" className="inline-block">
-              <Badge variant="secondary" className="rounded-full px-3 py-1 bg-jw-yellow text-jw-charcoal text-xs cursor-pointer hover:bg-jw-yellow/90 transition-colors">
-                <span className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-jw-burgundy animate-pulse" />
-                New Book Available Now
-              </Badge>
-            </Link>
-            
             <h1 className="font-heading text-2xl leading-tight text-jw-charcoal">
               Helping People Transform Through Self-Awareness, Healing, and Real Human Connection
             </h1>
@@ -69,13 +61,6 @@ export function Hero() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Text Content */}
             <div className="flex flex-col space-y-6">
-              <Link href="https://books2read.com/u/mq2K7v" target="_blank" className="inline-block w-fit">
-                <Badge variant="secondary" className="rounded-full px-4 py-1.5 bg-jw-yellow text-jw-charcoal cursor-pointer hover:bg-jw-yellow/90 transition-colors">
-                  <span className="mr-2 inline-block h-2 w-2 rounded-full bg-jw-burgundy animate-pulse" />
-                  New Book Available Now
-                </Badge>
-              </Link>
-              
               <h1 className="font-heading text-4xl lg:text-5xl xl:text-6xl leading-tight text-jw-charcoal">
                 Helping People Transform Through Self-Awareness, Healing, and Real Human Connection
               </h1>

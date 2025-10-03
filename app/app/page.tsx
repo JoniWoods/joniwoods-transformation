@@ -1,5 +1,6 @@
 
 import { Navigation } from "@/components/navigation";
+import { BookBanner } from "@/components/sections/book-banner";
 import { Hero } from "@/components/sections/hero";
 import { FeaturedIn } from "@/components/sections/featured-in";
 import { MediaAppearances } from "@/components/sections/media-appearances";
@@ -18,6 +19,7 @@ export default function HomePage() {
     <>
       <Navigation />
       <main>
+        <BookBanner />
         <Hero />
         <FeaturedIn />
         <MediaAppearances />
