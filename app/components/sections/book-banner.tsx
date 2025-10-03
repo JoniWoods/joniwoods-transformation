@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function BookBanner() {
   return (
-    <section className="w-full bg-white pt-6 md:pt-20">
+    <section className="w-full bg-white pt-[2px]">
       <div className="container mx-auto px-4 md:px-6">
         <Link 
           href="https://books2read.com/u/mq2K7v" 
@@ -22,8 +22,8 @@ export function BookBanner() {
           </div>
         </Link>
       </div>
-      {/* Spacing between banner and next section */}
-      <div className="h-[2px] md:h-[4px] lg:h-[6px]" />
+      {/* 10px spacing below banner */}
+      <div className="h-[10px]" />
     </section>
   );
 }
