@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <section id="about" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
+    <section id="about" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
       <div className="mx-auto grid justify-center gap-6 grid-cols-1 md:grid-cols-2 md:max-w-[64rem]">
         
         {/* Text content - Left side on desktop, below image on mobile */}

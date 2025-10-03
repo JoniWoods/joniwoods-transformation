@@ -38,7 +38,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
+    <section id="testimonials" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Transformation{" "}
@@ -70,9 +70,9 @@ export function Testimonials() {
         ))}
       </div>
       
-      <div className="mx-auto text-center">
+      <div className="mx-auto text-center px-4 md:px-0">
         <p className="text-muted-foreground mb-4">Ready to write your own transformation story?</p>
-        <Button asChild className="bg-jw-burgundy hover:bg-jw-rust">
+        <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
           <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
             Begin Your Journey
           </Link>

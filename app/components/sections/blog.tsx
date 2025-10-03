@@ -51,7 +51,7 @@ const articles = [
 
 export function Blog() {
   return (
-    <section id="resources" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
+    <section id="resources" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Latest{" "}
@@ -107,17 +107,17 @@ export function Blog() {
           Want these insights delivered directly to you?
         </p>
         <div className="flex flex-col sm:flex-row gap-2 justify-center">
-          <Button asChild className="bg-jw-blue text-white hover:bg-jw-blue/80">
+          <Button asChild className="bg-jw-blue text-white hover:bg-jw-blue/80 w-full sm:w-auto">
             <Link href="http://journeylifecoaching.life" target="_blank">
               Visit Blog
             </Link>
           </Button>
-          <Button asChild className="bg-jw-burgundy text-white border-2 border-jw-burgundy/80 hover:bg-transparent hover:text-jw-burgundy hover:border-jw-burgundy">
+          <Button asChild className="bg-jw-burgundy text-white border-2 border-jw-burgundy/80 hover:bg-transparent hover:text-jw-burgundy hover:border-jw-burgundy w-full sm:w-auto">
             <Link href="mailto:joni@journeylifecoaching.life?subject=Blog Subscription Request&body=Hi Joni,%0D%0A%0D%0AI'd like to subscribe to your blog updates.%0D%0A%0D%0AThank you!" target="_blank">
               Subscribe to Blog
             </Link>
           </Button>
-          <Button asChild className="bg-jw-yellow text-jw-charcoal hover:bg-jw-yellow/80">
+          <Button asChild className="bg-jw-yellow text-jw-charcoal hover:bg-jw-yellow/80 w-full sm:w-auto">
             <Link href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" target="_blank">
               YouTube Subscribe
             </Link>

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Book() {
   return (
-    <section id="book" className="container space-y-6 py-8 dark:bg-transparent md:py-12 lg:py-24">
+    <section id="book" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
       <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
         <div className="relative overflow-hidden rounded-lg border bg-background p-6">
           <div className="flex flex-col items-center justify-center h-full">
@@ -74,7 +74,7 @@ export function Book() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-2 justify-center">
-                <Button asChild className="bg-jw-burgundy hover:bg-jw-rust">
+                <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
                   <Link href="https://books2read.com/u/mq2K7v" target="_blank">
                     Buy Now
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,7 +82,7 @@ export function Book() {
                     </svg>
                   </Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" asChild className="w-full sm:w-auto">
                   <Link href="/Joni Woods Media Kit_Final.pdf" target="_blank">
                     Book Preview
                   </Link>

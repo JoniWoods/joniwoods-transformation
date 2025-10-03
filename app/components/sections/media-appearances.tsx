@@ -31,7 +31,7 @@ const appearances = [
 
 export function MediaAppearances() {
   return (
-    <section className="container space-y-6 py-8 md:py-12 lg:py-24">
+    <section className="px-0 md:container space-y-6 py-4 md:py-6 lg:py-10">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Recent{" "}
@@ -74,8 +74,8 @@ export function MediaAppearances() {
         ))}
       </div>
       
-      <div className="flex justify-center mt-8">
-        <Button asChild className="bg-jw-burgundy hover:bg-jw-rust" size="lg">
+      <div className="flex justify-center mt-8 px-4 md:px-0">
+        <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto" size="lg">
           <Link href="https://www.youtube.com/@joniwoods7141" target="_blank">
             View More Content
             <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -6,7 +6,7 @@ import Link from "next/link";
 export function Contact() {
   return (
     <section id="contact" className="border-t bg-muted/50">
-      <div className="container grid max-w-6xl gap-6 py-8 md:py-12 lg:py-24">
+      <div className="px-0 md:container grid max-w-6xl gap-6 py-4 md:py-6 lg:py-10">
         <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
           <Card>
             <CardContent className="p-6">
@@ -42,13 +42,13 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
-                  <Button asChild className="bg-jw-burgundy hover:bg-jw-rust">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-2">
+                  <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
                     <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
                       Book Discovery Call
                     </Link>
                   </Button>
-                  <Button variant="outline" asChild>
+                  <Button variant="outline" asChild className="w-full sm:w-auto">
                     <Link href="https://books2read.com/u/mq2K7v" target="_blank">
                       Get the Book
                     </Link>

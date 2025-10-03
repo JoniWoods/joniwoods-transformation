@@ -51,8 +51,8 @@ const features = [
 
 export function FeaturedIn() {
   return (
-    <section className="w-full bg-white pt-2 pb-12 md:pt-4 md:pb-16 border-b">
-      <div className="container mx-auto px-4">
+    <section className="w-full bg-white pt-2 pb-6 md:pt-3 md:pb-8 border-b">
+      <div className="mx-auto px-0 md:px-4">
         <h2 className="font-heading text-3xl md:text-4xl text-center text-jw-charcoal mb-10 md:mb-14">
           As Featured In
         </h2>
