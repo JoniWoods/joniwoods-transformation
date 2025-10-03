@@ -7,11 +7,12 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export function Navigation() {
-  const [scrolled, setScrolled] = useState(false);
+  const [isFloating, setIsFloating] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      // Float the header only after scrolling past ~400px (middle of hero section)
+      setIsFloating(window.scrollY > 400);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -27,7 +28,9 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b">
+    <nav className={`w-full z-50 bg-white/95 backdrop-blur border-b transition-all duration-300 ${
+      isFloating ? 'fixed top-0 shadow-md' : 'relative'
+    }`}>
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Image 
