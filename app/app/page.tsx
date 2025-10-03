@@ -1,4 +1,7 @@
 
+"use client";
+
+import { useEffect } from "react";
 import { Navigation } from "@/components/navigation";
 import { BookBanner } from "@/components/sections/book-banner";
 import { Hero } from "@/components/sections/hero";
@@ -15,6 +18,11 @@ import { Footer } from "@/components/sections/footer";
 import { FloatingElements } from "@/components/floating-elements";
 
 export default function HomePage() {
+  useEffect(() => {
+    // Ensure page always starts at the top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navigation />

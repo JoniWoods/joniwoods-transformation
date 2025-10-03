@@ -33,22 +33,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
         {children}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Ensure page loads at the top
-              if (typeof window !== 'undefined') {
-                window.addEventListener('load', function() {
-                  window.scrollTo(0, 0);
-                });
-                // Also scroll to top on page navigation
-                document.addEventListener('DOMContentLoaded', function() {
-                  window.scrollTo(0, 0);
-                });
+              // Disable browser scroll restoration
+              if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
               }
+              
+              // Force scroll to top immediately
+              window.scrollTo(0, 0);
+              
+              // Ensure scroll to top after page fully loads
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  window.scrollTo(0, 0);
+                }, 0);
+              });
             `,
           }}
         />
