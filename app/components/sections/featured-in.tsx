@@ -1,4 +1,6 @@
 
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,77 +9,141 @@ const features = [
     name: "DisruptHR",
     logo: "/images/featured-in/disrupthr.jpg",
     url: "https://www.linkedin.com/company/disrupthr-llc/",
-    width: 120,
-    height: 60
+    width: 130,
+    height: 50
   },
   {
     name: "Love Means Business",
     logo: "/images/featured-in/love-means-business.jpg",
     url: "https://www.linkedin.com/company/love-means-business/",
-    width: 140,
-    height: 60
+    width: 130,
+    height: 50
   },
   {
     name: "Walsh College",
     logo: "/images/featured-in/walsh-college.png",
     url: "https://walshcollege.edu",
     width: 130,
-    height: 60
+    height: 50
   },
   {
     name: "Washtenaw Business Association",
     logo: "/images/featured-in/wba.png",
     url: "https://www.washtenawbusinessassociation.com",
-    width: 100,
-    height: 60
+    width: 130,
+    height: 50
   },
   {
     name: "SHRM",
     logo: "/images/featured-in/shrm.png",
     url: "https://www.shrm.org",
-    width: 90,
-    height: 60
+    width: 130,
+    height: 50
   },
   {
     name: "The Sun Times News",
     logo: "/images/featured-in/sun-times-news.png",
     url: "https://thesuntimesnews.com",
-    width: 140,
-    height: 60
+    width: 130,
+    height: 50
   }
 ];
 
 export function FeaturedIn() {
   return (
-    <section className="w-full bg-jw-charcoal py-12 md:py-16">
+    <section className="w-full bg-white py-12 md:py-16 border-b">
       <div className="container mx-auto px-4">
-        <h2 className="font-heading text-3xl md:text-4xl text-center text-white mb-10 md:mb-14">
+        <h2 className="font-heading text-3xl md:text-4xl text-center text-jw-charcoal mb-10 md:mb-14">
           As Featured In
         </h2>
         
-        {/* Logo Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 items-center justify-items-center max-w-6xl mx-auto">
+        {/* Desktop: Static Grid */}
+        <div className="hidden lg:flex items-center justify-center gap-12 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <Link
               key={index}
               href={feature.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center justify-center w-full h-[60px] opacity-70 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0"
+              className="group relative flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300"
               aria-label={`Visit ${feature.name}`}
             >
-              <div className="relative w-full h-full flex items-center justify-center">
+              <div className="relative flex items-center justify-center h-[50px]">
                 <Image
                   src={feature.logo}
                   alt={`${feature.name} logo`}
                   width={feature.width}
                   height={feature.height}
-                  className="object-contain max-w-full max-h-full"
-                  style={{ filter: 'brightness(0) invert(1)' }}
+                  className="object-contain max-h-full w-auto"
                 />
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* Mobile/Tablet: Auto-scrolling carousel */}
+        <div className="lg:hidden overflow-hidden relative">
+          <style jsx>{`
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .animate-scroll {
+              animation: scroll 20s linear infinite;
+            }
+            .animate-scroll:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
+          
+          <div className="flex animate-scroll" style={{ width: 'max-content' }}>
+            {/* First set of logos */}
+            {features.map((feature, index) => (
+              <Link
+                key={`first-${index}`}
+                href={feature.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 mx-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
+                aria-label={`Visit ${feature.name}`}
+              >
+                <div className="relative flex items-center justify-center h-[50px]">
+                  <Image
+                    src={feature.logo}
+                    alt={`${feature.name} logo`}
+                    width={feature.width}
+                    height={feature.height}
+                    className="object-contain max-h-full w-auto"
+                  />
+                </div>
+              </Link>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {features.map((feature, index) => (
+              <Link
+                key={`second-${index}`}
+                href={feature.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 mx-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
+                aria-label={`Visit ${feature.name}`}
+              >
+                <div className="relative flex items-center justify-center h-[50px]">
+                  <Image
+                    src={feature.logo}
+                    alt={`${feature.name} logo`}
+                    width={feature.width}
+                    height={feature.height}
+                    className="object-contain max-h-full w-auto"
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
