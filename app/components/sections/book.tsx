@@ -76,7 +76,7 @@ export function Book() {
               
               <div className="flex flex-col sm:flex-row gap-2 justify-center">
                 <Button asChild className="bg-jw-burgundy hover:bg-jw-rust">
-                  <Link href="https://a.co/d/67tuSAW" target="_blank">
+                  <Link href="https://books2read.com/u/mq2K7v" target="_blank">
                     Buy Now
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
