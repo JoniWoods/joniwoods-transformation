@@ -21,7 +21,7 @@ export function Hero() {
         </div>
         
         <div className="px-4 py-6">
-          <div className="flex flex-col items-center text-center space-y-3">
+          <div className="flex flex-col items-start text-left space-y-3">
             <h1 className="font-heading text-lg leading-tight text-jw-charcoal">
               Helping People Transform Through Self-Awareness, Healing, and Real Human Connection
             </h1>

@@ -105,6 +105,19 @@ export function Contact() {
                     </Link>
                     
                     <Link 
+                      href="https://www.tiktok.com/@joniwoods730" 
+                      target="_blank"
+                      className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-jw-burgundy/10">
+                        <svg className="h-4 w-4 text-jw-burgundy" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 015.2-1.74V12.5a7.72 7.72 0 00-4.67-1.51c-4.08 0-7.72 3.33-7.72 7.72s3.64 7.72 7.72 7.72 7.72-3.33 7.72-7.72V9.4a8.07 8.07 0 004.25 1.2v-3.91z"/>
+                        </svg>
+                      </div>
+                      <span>TikTok</span>
+                    </Link>
+                    
+                    <Link 
                       href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" 
                       target="_blank"
                       className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -119,15 +132,6 @@ export function Contact() {
                     
                     {/* LinkedIn link temporarily removed due to access restrictions */}
                   </div>
-                </div>
-
-                <div className="pt-4 border-t">
-                  <p className="text-xs text-muted-foreground text-center">
-                    © 2025 Joni Woods. All rights reserved.
-                  </p>
-                  <p className="text-xs text-muted-foreground text-center mt-1 italic">
-                    "Healing is messy. But so is becoming whole."
-                  </p>
                 </div>
               </div>
             </CardContent>

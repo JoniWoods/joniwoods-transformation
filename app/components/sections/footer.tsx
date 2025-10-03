@@ -14,30 +14,30 @@ function TikTokIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="bg-jw-charcoal text-white">
+    <footer className="bg-gray-500/75 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Main Footer Content */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-myriad-semibold text-jw-yellow mb-2">
+            <h3 className="text-2xl font-myriad-semibold text-white mb-2">
               Joni Woods
             </h3>
-            <p className="text-jw-yellow-light italic mb-4 font-myriad-light">
+            <p className="text-white/90 italic mb-4 font-myriad-light">
               "Creating the future You want!"
             </p>
-            <div className="space-y-2 text-jw-gray">
+            <div className="space-y-2 text-white/80">
               <p>Journey Coaching - Human Connection & Culture Specialist</p>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-myriad-semibold text-jw-yellow mb-4">Quick Links</h4>
+            <h4 className="text-lg font-myriad-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link 
                   href="#about" 
-                  className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   About
                 </Link>
@@ -45,7 +45,7 @@ export function Footer() {
               <li>
                 <Link 
                   href="#book" 
-                  className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   Book
                 </Link>
@@ -53,7 +53,7 @@ export function Footer() {
               <li>
                 <Link 
                   href="#services" 
-                  className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   Coaching
                 </Link>
@@ -61,7 +61,7 @@ export function Footer() {
               <li>
                 <Link 
                   href="#transformation-form" 
-                  className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   Newsletter
                 </Link>
@@ -71,13 +71,13 @@ export function Footer() {
 
           {/* Resources & Connect */}
           <div>
-            <h4 className="text-lg font-myriad-semibold text-jw-yellow mb-4">Resources</h4>
+            <h4 className="text-lg font-myriad-semibold text-white mb-4">Resources</h4>
             <ul className="space-y-2 mb-6">
               <li>
                 <Link 
                   href="https://journeylifecoaching.life" 
                   target="_blank"
-                  className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   Journey Coaching
                 </Link>
@@ -85,7 +85,7 @@ export function Footer() {
               <li>
                 <Link 
                   href="#" 
-                  className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   Free Resources
                 </Link>
@@ -93,26 +93,26 @@ export function Footer() {
               <li>
                 <Link 
                   href="#" 
-                  className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                  className="text-white/80 hover:text-white transition-colors"
                 >
                   Book Club Guide
                 </Link>
               </li>
             </ul>
             
-            <h4 className="text-lg font-myriad-semibold text-jw-yellow mb-4">Connect</h4>
+            <h4 className="text-lg font-myriad-semibold text-white mb-4">Connect</h4>
             <div className="flex space-x-4">
               <Link 
                 href="https://www.instagram.com/authorjoniwoods/" 
                 target="_blank"
-                className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                className="text-white/80 hover:text-white transition-colors"
               >
                 <Instagram className="h-6 w-6" />
               </Link>
               <Link 
                 href="https://www.tiktok.com/@joniwoods730" 
                 target="_blank"
-                className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                className="text-white/80 hover:text-white transition-colors"
               >
                 <TikTokIcon className="h-6 w-6" />
               </Link>
@@ -120,14 +120,14 @@ export function Footer() {
               <Link 
                 href="https://www.facebook.com/joni.woods.9" 
                 target="_blank"
-                className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                className="text-white/80 hover:text-white transition-colors"
               >
                 <Facebook className="h-6 w-6" />
               </Link>
               <Link 
                 href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" 
                 target="_blank"
-                className="text-jw-gray hover:text-jw-yellow-light transition-colors"
+                className="text-white/80 hover:text-white transition-colors"
               >
                 <Youtube className="h-6 w-6" />
               </Link>
@@ -136,27 +136,27 @@ export function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-jw-gray/20 mt-8 pt-8">
+        <div className="border-t border-white/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-jw-gray text-sm">
+            <p className="text-white/80 text-sm">
               © 2024 Joni Woods. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link 
                 href="#" 
-                className="text-jw-gray hover:text-jw-yellow-light text-sm transition-colors"
+                className="text-white/80 hover:text-white text-sm transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link 
                 href="#" 
-                className="text-jw-gray hover:text-jw-yellow-light text-sm transition-colors"
+                className="text-white/80 hover:text-white text-sm transition-colors"
               >
                 Terms of Service
               </Link>
               <Link 
                 href="#" 
-                className="text-jw-gray hover:text-jw-yellow-light text-sm transition-colors"
+                className="text-white/80 hover:text-white text-sm transition-colors"
               >
                 Cookie Policy
               </Link>

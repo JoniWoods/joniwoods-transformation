@@ -54,12 +54,11 @@ export function Testimonials() {
       <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[76rem] md:grid-cols-3">
         {testimonials.map((testimonial, index) => (
           <Card key={index} className="h-full">
-            <CardHeader>
-              <div className="text-4xl text-jw-burgundy">"</div>
-            </CardHeader>
-            <CardContent className="flex-1">
+            <CardContent className="flex-1 pt-6">
               <CardDescription className="italic leading-relaxed text-base">
+                <span className="text-4xl text-jw-burgundy leading-none">"</span>
                 {testimonial.quote}
+                <span className="text-4xl text-jw-burgundy leading-none">"</span>
               </CardDescription>
             </CardContent>
             <CardFooter className="flex flex-col items-start border-t pt-4">
