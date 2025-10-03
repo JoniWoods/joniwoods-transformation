@@ -23,7 +23,7 @@ export function BookBanner() {
         </Link>
       </div>
       {/* Spacing between banner and hero */}
-      <div className="h-[10px] md:h-[20px] lg:h-[30px]" />
+      <div className="h-[5px] md:h-[10px] lg:h-[15px]" />
     </section>
   );
 }
