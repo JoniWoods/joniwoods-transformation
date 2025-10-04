@@ -76,13 +76,15 @@ export function About() {
           </div>
           
           {/* Image - Right side on desktop only (hidden on mobile) */}
-          <div className="hidden md:block rounded-lg overflow-hidden mx-auto h-auto md:h-[60vh] max-w-sm md:max-w-none order-2">
-            <img
-              src="/images/JoniWoods_SideView.webp"
-              alt="Joni Woods - Author and Life Coach"
-              className="w-full h-full object-cover rounded-lg"
-              style={{ objectPosition: 'center center' }}
-            />
+          <div className="hidden md:block relative overflow-hidden rounded-lg border bg-background p-2 order-2">
+            <div className="flex flex-col justify-between rounded-md overflow-hidden h-full">
+              <img
+                src="/images/JoniWoods_SideView.webp"
+                alt="Joni Woods - Author and Life Coach"
+                className="w-full h-full object-cover rounded-md"
+                style={{ objectPosition: 'center center' }}
+              />
+            </div>
           </div>
         </div>
         
