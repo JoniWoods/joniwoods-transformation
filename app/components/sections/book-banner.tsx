@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function BookBanner() {
   return (
-    <section className="w-full bg-white pt-[2px]">
+    <section className="w-full pt-[2px]" style={{ backgroundColor: '#D85A50' }}>
       <Link 
         href="https://books2read.com/u/mq2K7v" 
         target="_blank"
