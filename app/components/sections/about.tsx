@@ -59,16 +59,8 @@ export function About() {
                   className="bg-jw-blue text-white border-2 border-jw-blue hover:bg-jw-blue/60 hover:text-white w-full sm:w-auto" 
                   asChild
                 >
-                  <Link href="http://joniwoods.com" target="_blank">
-                    Learn More
-                  </Link>
-                </Button>
-                <Button 
-                  className="bg-jw-burgundy text-white border-2 border-jw-burgundy/80 hover:bg-transparent hover:text-jw-burgundy hover:border-jw-burgundy w-full sm:w-auto" 
-                  asChild
-                >
-                  <Link href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" target="_blank">
-                    Subscribe
+                  <Link href="mailto:joniwoods@gmail.com?subject=Sign%20Me%20Up%20for%20the%20Newsletter">
+                    Get the Newsletter
                   </Link>
                 </Button>
               </div>
