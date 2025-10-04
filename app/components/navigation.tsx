@@ -40,7 +40,7 @@ export function Navigation() {
             height={40}
             className="rounded-full"
           />
-          <span className="font-bold text-xl">
+          <span className="font-bold text-xl" style={{ fontFamily: 'Georgia, serif' }}>
             Joni Woods
           </span>
         </Link>
