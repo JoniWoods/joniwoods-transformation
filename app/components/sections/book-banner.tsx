@@ -4,19 +4,20 @@ import Image from "next/image";
 
 export function BookBanner() {
   return (
-    <section className="w-full bg-white pt-[2px]">
+    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] bg-white">
       <Link 
         href="https://books2read.com/u/mq2K7v" 
         target="_blank"
         className="block w-full hover:opacity-90 transition-opacity"
       >
-        <div className="relative w-full py-[24px] md:py-[32px]">
-          <div className="relative w-full aspect-[1440/192]">
+        <div className="relative w-full py-6 md:py-8">
+          <div className="relative w-full h-auto">
             <Image
               src="/images/book-banner.png"
               alt="Burned, Blocked, and Better Than Ever - A Raw Journey of Healing"
-              fill
-              className="object-contain"
+              width={1440}
+              height={192}
+              className="w-full h-auto"
               priority
             />
           </div>
