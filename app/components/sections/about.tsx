@@ -9,23 +9,33 @@ export function About() {
     <section id="about" className="px-4 sm:px-6 md:px-8 lg:container space-y-6 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16 dark:bg-transparent">
       <div className="mx-auto space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 md:max-w-[64rem] lg:max-w-[80rem]">
         
+        {/* Section Header */}
+        <div className="text-center space-y-4">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Meet <span className="gradient-text">Joni Woods</span>
+          </h2>
+          <h3 className="text-xl font-semibold italic text-muted-foreground/80 max-w-3xl mx-auto">
+            Certified life coach and culture strategist with over 15 years 
+            helping individuals, couples, and organizations strengthen 
+            communication and lead with emotional intelligence.
+          </h3>
+        </div>
+
+        {/* Photo - Shows on mobile after header */}
+        <div className="block md:hidden rounded-lg overflow-hidden mx-auto max-w-sm">
+          <img
+            src="/images/JoniWoods_SideView.webp"
+            alt="Joni Woods - Author and Life Coach"
+            className="w-full h-auto object-cover rounded-lg"
+            style={{ objectPosition: 'center center' }}
+          />
+        </div>
+        
         <div className="grid justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 grid-cols-1 md:grid-cols-2">
-          {/* Text content - Left side on desktop, first on mobile */}
+          {/* Text content - Left side on desktop, after photo on mobile */}
           <div className="relative overflow-hidden rounded-lg border bg-background p-2 order-1">
             <div className="flex flex-col justify-between rounded-md p-6">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Meet <span className="gradient-text">Joni Woods</span>
-                </h2>
-                <h3 className="text-xl font-semibold mb-4 italic text-muted-foreground/80">
-                  Certified life coach and culture strategist with over 15 years 
-                  helping individuals, couples, and organizations strengthen 
-                  communication and lead with emotional intelligence.
-                </h3>
-              </div>
-              
               <div className="space-y-4 text-muted-foreground/80">
-                <br />
                 <p>
                   As the founder of Journey Coaching, I specialize in guiding 
                   clients through personal growth, relational healing, and 
@@ -65,8 +75,8 @@ export function About() {
             </div>
           </div>
           
-          {/* Image - Right side on desktop, second on mobile */}
-          <div className="rounded-lg overflow-hidden mx-auto h-auto md:h-[60vh] max-w-sm md:max-w-none order-2">
+          {/* Image - Right side on desktop only (hidden on mobile) */}
+          <div className="hidden md:block rounded-lg overflow-hidden mx-auto h-auto md:h-[60vh] max-w-sm md:max-w-none order-2">
             <img
               src="/images/JoniWoods_SideView.webp"
               alt="Joni Woods - Author and Life Coach"
