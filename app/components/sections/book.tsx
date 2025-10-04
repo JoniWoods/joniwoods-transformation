@@ -18,18 +18,20 @@ export function Book() {
                 className="object-contain"
               />
             </div>
-            <Link href="https://books2read.com/u/mq2K7v" target="_blank">
-              <Badge className="bg-jw-yellow text-jw-charcoal hover:bg-jw-yellow-light cursor-pointer transition-colors">
+            <Button 
+              asChild 
+              className="bg-jw-blue text-white border-2 border-jw-blue hover:bg-jw-blue/60 hover:text-white"
+            >
+              <Link href="https://books2read.com/u/mq2K7v" target="_blank">
                 Available on All Platforms
-              </Badge>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
         
         <div className="relative overflow-hidden rounded-lg border bg-background p-2">
           <div className="flex flex-col justify-between rounded-md p-6 h-full">
             <div className="space-y-4">
-              <Badge className="bg-jw-yellow text-jw-charcoal mb-2 w-fit">New Release</Badge>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Get the <span className="gradient-text">Book</span>
               </h2>
