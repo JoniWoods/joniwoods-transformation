@@ -103,9 +103,6 @@ export function Blog() {
       </div>
       
       <div className="mx-auto text-center space-y-4">
-        <p className="text-muted-foreground">
-          Want these insights delivered directly to you?
-        </p>
         <div className="flex flex-col sm:flex-row gap-2 justify-center">
           <Button asChild className="bg-jw-blue text-white hover:bg-jw-blue/80 w-full sm:w-auto">
             <Link href="http://journeylifecoaching.life" target="_blank">
