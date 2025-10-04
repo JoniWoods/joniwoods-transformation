@@ -8,7 +8,7 @@ export function Book() {
   return (
     <section id="book" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
       <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
-        <div className="relative overflow-hidden rounded-lg border bg-background p-6">
+        <div className="relative overflow-hidden rounded-lg bg-background p-6">
           <div className="flex flex-col items-center justify-center h-full">
             <div className="relative w-full max-w-sm aspect-[3/4] mb-6">
               <Image
@@ -29,7 +29,7 @@ export function Book() {
           </div>
         </div>
         
-        <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+        <div className="relative overflow-hidden rounded-lg bg-background p-2">
           <div className="flex flex-col justify-between rounded-md p-6 h-full">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">

@@ -33,7 +33,7 @@ export function About() {
         
         <div className="grid justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 grid-cols-1 md:grid-cols-2">
           {/* Text content - Left side on desktop, after photo on mobile */}
-          <div className="relative overflow-hidden rounded-lg border bg-background p-2 order-1">
+          <div className="relative overflow-hidden rounded-lg bg-background p-2 order-1">
             <div className="flex flex-col justify-between rounded-md p-6">
               <div className="space-y-4 text-muted-foreground/80">
                 <p>
@@ -76,7 +76,7 @@ export function About() {
           </div>
           
           {/* Image - Right side on desktop only (hidden on mobile) */}
-          <div className="hidden md:block relative overflow-hidden rounded-lg border bg-background p-2 order-2">
+          <div className="hidden md:block relative overflow-hidden rounded-lg bg-background p-2 order-2">
             <div className="flex flex-col justify-between rounded-md overflow-hidden h-full">
               <img
                 src="/images/JoniWoods_SideView.webp"
