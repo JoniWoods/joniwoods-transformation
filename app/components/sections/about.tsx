@@ -6,21 +6,21 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <section id="about" className="px-4 sm:px-6 md:px-8 lg:container space-y-6 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16 dark:bg-transparent">
-      <div className="mx-auto space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 md:max-w-[64rem] lg:max-w-[80rem]">
+    <section id="about" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
+      <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+          Meet{" "}
+          <span className="gradient-text">
+            Joni Woods
+          </span>
+        </h2>
+        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          Certified life coach and culture strategist with over 15 years helping individuals, couples, and organizations strengthen communication and lead with emotional intelligence.
+        </p>
+      </div>
+      
+      <div className="mx-auto space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 md:max-w-[64rem] lg:max-w-[80rem] px-4 sm:px-6 md:px-8">
         
-        {/* Section Header */}
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Meet <span className="gradient-text">Joni Woods</span>
-          </h2>
-          <h3 className="text-xl font-semibold italic text-muted-foreground/80 max-w-3xl mx-auto">
-            Certified life coach and culture strategist with over 15 years 
-            helping individuals, couples, and organizations strengthen 
-            communication and lead with emotional intelligence.
-          </h3>
-        </div>
-
         {/* Photo - Shows on mobile after header */}
         <div className="block md:hidden rounded-lg overflow-hidden mx-auto max-w-sm">
           <img
