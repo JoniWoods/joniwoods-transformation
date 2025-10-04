@@ -10,7 +10,7 @@ export function BookBanner() {
         target="_blank"
         className="block w-full hover:opacity-90 transition-opacity"
       >
-        <div className="relative w-full py-[12px] md:py-[16px]">
+        <div className="relative w-full py-[24px] md:py-[32px]">
           <div className="relative w-full aspect-[1440/192]">
             <Image
               src="/images/book-banner.png"
