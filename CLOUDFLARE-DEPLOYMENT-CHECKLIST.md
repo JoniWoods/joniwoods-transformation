@@ -191,14 +191,19 @@ Cloudflare Dashboard → Pages → joniwoods-transformation → Settings → Env
 
 Before clicking Deploy:
 
-- [ ] Deleted `/static-html-site/` folder from repository
-- [ ] Deleted `/app/prisma/` folder from repository
-- [ ] Updated `app/next.config.js` with `output: 'export'`
+- [x] Deleted `/static-html-site/` folder from repository ✅
+- [x] Deleted `/app/prisma/` folder from repository ✅
+- [x] Updated `app/next.config.js` with `output: 'export'` and experimental config ✅
+- [x] Removed broken `yarn.lock` symlink ✅
+- [x] Removed API routes (incompatible with static export) ✅
+- [x] Fixed font loading (removed next/font/google) ✅
+- [x] Updated transformation form to be fully client-side ✅
 - [ ] Set Cloudflare Framework preset to "Next.js (Static HTML Export)"
 - [ ] Set Build command to `cd app && npm install && npm run build`
 - [ ] Set Build output directory to `app/out`
 - [ ] Added NODE_VERSION=18 environment variable
-- [ ] Committed all changes to GitHub main branch
+- [x] Committed all changes to GitHub PR branch ✅
+- [ ] Merged PR to main branch
 - [ ] Triggered deployment (automatic or manual)
 - [ ] Waited for build to complete (3-5 minutes)
 - [ ] Verified site loads at `*.pages.dev` URL
