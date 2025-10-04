@@ -10,14 +10,16 @@ export function BookBanner() {
         target="_blank"
         className="block w-full hover:opacity-90 transition-opacity"
       >
-        <div className="relative w-full aspect-[1440/192] max-h-[150px] md:max-h-[200px] py-[8px] md:py-[12px]">
-          <Image
-            src="/images/book-banner.png"
-            alt="Burned, Blocked, and Better Than Ever - A Raw Journey of Healing"
-            fill
-            className="object-cover"
-            priority
-          />
+        <div className="relative w-full py-[12px] md:py-[16px]">
+          <div className="relative w-full aspect-[1440/192]">
+            <Image
+              src="/images/book-banner.png"
+              alt="Burned, Blocked, and Better Than Ever - A Raw Journey of Healing"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
       </Link>
     </section>
