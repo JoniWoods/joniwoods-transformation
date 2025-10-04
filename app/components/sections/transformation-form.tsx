@@ -31,22 +31,10 @@ export function TransformationForm() {
     setLoading(true);
 
     try {
-      // Send form data to API
-      const response = await fetch('/api/transformation-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        const personalizedMsg = generatePersonalizedResponse(formData);
-        setPersonalizedResponse(personalizedMsg);
-        setSubmitted(true);
-      } else {
-        alert('There was an error submitting the form. Please try again.');
-      }
+      // Generate personalized response (static export - no server-side API)
+      const personalizedMsg = generatePersonalizedResponse(formData);
+      setPersonalizedResponse(personalizedMsg);
+      setSubmitted(true);
     } catch (error) {
       alert('There was an error submitting the form. Please try again.');
     } finally {

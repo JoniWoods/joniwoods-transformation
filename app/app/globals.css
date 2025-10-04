@@ -4,6 +4,8 @@
 @tailwind utilities;
 
 /* Font face declarations */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @font-face {
   font-family: 'Myriad Pro Light';
   src: url('/fonts/MyriadPro Light.otf') format('opentype');
