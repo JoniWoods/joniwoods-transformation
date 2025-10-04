@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <section id="about" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
-      <div className="mx-auto grid justify-center gap-6 grid-cols-1 md:grid-cols-2 md:max-w-[64rem]">
+    <section id="about" className="px-4 sm:px-6 md:px-8 lg:container space-y-6 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16 dark:bg-transparent">
+      <div className="mx-auto grid justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 grid-cols-1 md:grid-cols-2 md:max-w-[64rem] lg:max-w-[80rem]">
         
         {/* Text content - Left side on desktop, below image on mobile */}
         <div className="relative overflow-hidden rounded-lg border bg-background p-2 order-2 md:order-1">

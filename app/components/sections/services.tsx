@@ -36,15 +36,15 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
-      <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+    <section id="services" className="px-4 sm:px-6 md:px-8 lg:container space-y-6 sm:space-y-8 md:space-y-10 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16 dark:bg-transparent">
+      <div className="mx-auto flex max-w-[58rem] lg:max-w-[70rem] flex-col items-center space-y-4 sm:space-y-5 md:space-y-6 text-center px-4">
+        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.1]">
           <span className="gradient-text">
             Transformation
           </span>{" "}
           Programs
         </h2>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+        <p className="max-w-[90%] sm:max-w-[85%] leading-normal text-muted-foreground text-base sm:text-lg md:text-xl sm:leading-7">
           Whether you're healing from trauma, building better relationships, or leading teams 
           through change, I meet you where you are and guide you where you want to go.
         </p>

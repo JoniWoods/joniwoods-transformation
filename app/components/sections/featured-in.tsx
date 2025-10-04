@@ -51,9 +51,9 @@ const features = [
 
 export function FeaturedIn() {
   return (
-    <section className="w-full bg-white pt-2 pb-8 md:pt-3 md:pb-10 border-b" style={{ paddingBottom: 'calc(1.5rem + 10px)' }}>
-      <div className="mx-auto px-0 md:px-4">
-        <h2 className="font-heading text-3xl md:text-4xl text-center text-jw-charcoal mb-10 md:mb-14">
+    <section className="w-full bg-white pt-4 pb-8 sm:pt-6 sm:pb-10 md:pt-8 md:pb-12 lg:pt-10 lg:pb-14 border-b">
+      <div className="mx-auto px-4 sm:px-6 md:px-8">
+        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-jw-charcoal mb-8 sm:mb-10 md:mb-12 lg:mb-14">
           As Featured In
         </h2>
         
