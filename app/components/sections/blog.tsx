@@ -114,6 +114,11 @@ export function Blog() {
               YouTube
             </Link>
           </Button>
+          <Button asChild className="bg-jw-rust text-white hover:bg-jw-rust/80 w-full sm:w-auto">
+            <Link href="https://journeylifecoaching.life/newsletter/" target="_blank">
+              Get the Newsletter
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
