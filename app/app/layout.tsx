@@ -6,6 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://joniwoods.com'),
   title: "Joni Woods - Burned, Blocked, and Better Than Ever",
   description: "A raw, faith-rooted memoir of divorce, self-discovery, and the healing that begins when you stop pretending you're fine.",
   keywords: "Joni Woods, healing, divorce recovery, self-discovery, relationship coach, emotional intelligence",
@@ -24,6 +25,12 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Joni Woods - Burned, Blocked, and Better Than Ever",
+    description: "Transform your pain into power. Break generational patterns. Create the future you deserve.",
+    images: ["/images/JoniWoods_logo.png"],
   },
 };
 
