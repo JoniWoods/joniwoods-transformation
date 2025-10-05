@@ -20,55 +20,39 @@ The following visual changes have been successfully implemented and tested:
 
 ## 🔧 Required Cloudflare Configuration Steps
 
-### STEP 1: Clean Up Repository Files
+### ✅ STEP 1: Repository Cleanup (COMPLETED)
 
-**Files to DELETE via GitHub:**
+The following cleanup has already been completed:
 
-1. `/static-html-site/` (entire folder)
-   - This is an old abandoned HTML site
-   - Navigate to the folder in GitHub
-   - Delete the entire directory
+1. ✅ `/static-html-site/` directory has been removed
+   - Old abandoned HTML site has been deleted
 
-2. `/app/prisma/` (folder inside app directory)
-   - Not being used in the current implementation
-   - Navigate to `app/prisma` in GitHub
-   - Delete the entire directory
+2. ✅ `/app/prisma/` directory has been removed
+   - Unused Prisma configuration has been deleted
 
-**How to delete via GitHub web interface:**
-- Go to `https://github.com/JoniWoods/joniwoods-transformation`
-- Navigate to each folder
-- Click the folder name
-- Click "..." (three dots) → "Delete directory"
-- Commit with message: "Remove unused files for Cloudflare deployment"
+3. ✅ Build artifacts removed from root
+   - `index.html`, `styles.css`, `404.html`, `_next/`, `fonts/`, `images/` removed
+   - `.gitignore` updated to prevent future commits of build artifacts
+
+4. ✅ Repository now has clean structure
+   - Single source of truth: `/app/` directory contains Next.js application
+   - See `CLEANUP-SUMMARY.md` for complete details
+
+**No action needed for Step 1** - The repository has been cleaned up and is ready for deployment.
 
 ---
 
-### STEP 2: Update next.config.js
+### STEP 2: Update next.config.js (ALREADY CONFIGURED)
 
 **File:** `/app/next.config.js`
 
-**Current Line 6:**
-```javascript
-output: process.env.NEXT_OUTPUT_MODE,
-```
-
-**Change to:**
-```javascript
-output: 'export',  // Force static export for Cloudflare Pages
-```
-
-**Complete updated file should look like:**
+✅ The configuration is already correct:
 
 ```javascript
-const path = require('path');
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: process.env.NEXT_DIST_DIR || '.next',
-  output: 'export',  // Force static export for Cloudflare Pages
-  experimental: {
-    outputFileTracingRoot: path.join(__dirname, '../'),
-  },
+  output: 'export',  // ✅ Already configured for static export
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -81,12 +65,7 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
-**How to update:**
-1. Go to GitHub: `https://github.com/JoniWoods/joniwoods-transformation`
-2. Navigate to `app/next.config.js`
-3. Click the pencil icon (Edit this file)
-4. Change line 6 as shown above
-5. Commit changes: "Configure Next.js for static export"
+**No action needed for Step 2** - The Next.js app is already configured for static export.
 
 ---
 
@@ -189,16 +168,17 @@ Cloudflare Dashboard → Pages → joniwoods-transformation → Settings → Env
 
 ## 📋 Deployment Checklist
 
-Before clicking Deploy:
+Ready to deploy:
 
-- [ ] Deleted `/static-html-site/` folder from repository
-- [ ] Deleted `/app/prisma/` folder from repository
-- [ ] Updated `app/next.config.js` with `output: 'export'`
+- [x] Deleted `/static-html-site/` folder from repository
+- [x] Deleted `/app/prisma/` folder from repository  
+- [x] Removed build artifacts from root directory
+- [x] Updated `.gitignore` to prevent committing build artifacts
+- [x] Verified `app/next.config.js` has `output: 'export'`
 - [ ] Set Cloudflare Framework preset to "Next.js (Static HTML Export)"
 - [ ] Set Build command to `cd app && npm install && npm run build`
 - [ ] Set Build output directory to `app/out`
 - [ ] Added NODE_VERSION=18 environment variable
-- [ ] Committed all changes to GitHub main branch
 - [ ] Triggered deployment (automatic or manual)
 - [ ] Waited for build to complete (3-5 minutes)
 - [ ] Verified site loads at `*.pages.dev` URL
