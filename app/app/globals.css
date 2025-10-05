@@ -107,3 +107,13 @@ html {
 .gradient-text-blue {
   @apply bg-gradient-to-r from-jw-blue to-blue-600 bg-clip-text text-transparent;
 }
+
+/* Keyframe animations */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
