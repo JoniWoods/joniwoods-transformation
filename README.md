@@ -1,7 +1,7 @@
 
-# Joni Woods - Static Website
+# Joni Woods - Transformation Website
 
-A beautiful, professional website for Joni Woods' book and coaching services, converted to static HTML for reliable deployment and lightning-fast performance.
+A beautiful, professional Next.js website for Joni Woods' book and coaching services, configured for static deployment.
 
 ## 🌟 Features
 
@@ -11,54 +11,80 @@ A beautiful, professional website for Joni Woods' book and coaching services, co
 - 📞 **Contact Integration**: Calendly booking and social media links
 - 📱 **Fully Responsive**: Perfect display on all devices
 - 🎨 **Custom Branding**: Joni's signature color palette (burgundy, rust, yellow, blue)
-- ⚡ **Lightning Fast**: Pure HTML/CSS for instant loading
-- 🔒 **Reliable**: No build dependencies or deployment issues
+- ⚡ **Fast Performance**: Static export with Next.js optimization
+- 🔒 **Reliable**: Modern build system with static output
 
 ## 🚀 Live Sites
 
 - **GitHub Pages**: https://joniwoods.github.io/joniwoods-transformation/
 - **Abacus.AI**: https://joniwoods.abacusai.app/
 
-Both versions look **identical** and showcase the complete Joni Woods transformation website.
-
-## 📁 File Structure
+## 📁 Repository Structure
 
 ```
 /
-├── index.html          # Main website file
-├── styles.css          # Compiled Tailwind CSS
-├── images/            # All images and media
-│   ├── hero/          # Hero background images
-│   ├── media-appearances/  # Podcast/media images
-│   ├── JoniWoods_logo.png
-│   ├── Joni_Woods_Author_Portrait-1.jpg
-│   └── Woods_FrontCover_3D.png
-├── fonts/             # Custom fonts
-└── static-html-site/  # Development backup
+├── app/                # Next.js application (main source)
+│   ├── app/           # Next.js app directory
+│   ├── components/    # React components
+│   ├── public/        # Static assets (images, fonts)
+│   ├── next.config.js # Next.js configuration
+│   └── package.json   # Dependencies
+├── CLOUDFLARE-DEPLOYMENT-CHECKLIST.md
+├── DEPLOYMENT_UPDATE.md
+├── GITHUB-DEPLOYMENT-INSTRUCTIONS.md
+└── README.md
+```
+
+## 🛠 Development
+
+The website is built with Next.js and exports to static HTML for deployment:
+
+```bash
+cd app
+npm install
+npm run dev      # Development server
+npm run build    # Build static export (outputs to app/out/)
 ```
 
 ## 🎯 Sections Included
 
-1. **Navigation** - Smooth scroll to sections
-2. **Hero** - Book announcement with hero image
-3. **Media Appearances** - Recent podcast features
-4. **Transformation Form** - Call-to-action section
-5. **Book Section** - Detailed book information
-6. **About** - Professional bio with highlights under author photo
-7. **Services** - Coaching programs (Individual, Corporate, Speaking, Relationship)
-8. **Testimonials** - Client success stories
-9. **Blog** - Latest articles
-10. **Contact** - Multiple contact methods
-11. **Footer** - Links and social media
+1. **Navigation** - Smooth navigation to sections
+2. **Book Banner** - Full-width promotional banner
+3. **Hero** - Transformation message with professional portrait
+4. **Featured In** - Media appearances and organizations
+5. **Transformation Form** - Lead capture for roadmap
+6. **Media Appearances** - Recent podcast features
+7. **Book Section** - Detailed book information with purchase links
+8. **About** - Professional bio with highlights
+9. **Services** - Coaching programs (Individual, Corporate, Speaking, Relationship)
+10. **Testimonials** - Client success stories
+11. **Blog** - Latest articles from Journey Life Coaching
+12. **Contact** - Multiple contact methods
+13. **Footer** - Links and social media
 
 ## 🛠 Technical Details
 
-- **Pure HTML/CSS/JS** - No build process required
-- **Tailwind CSS** - Pre-compiled for optimal performance
-- **Custom Fonts** - Myriad Pro family loaded locally
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Static Export** - Pre-rendered HTML for optimal performance
+- **Custom Fonts** - Myriad Pro family
 - **Optimized Images** - All formats supported (PNG, JPG, WebP)
 - **Mobile-First** - Responsive design principles
 - **Cross-Browser** - Works in all modern browsers
+
+## 🚀 Deployment
+
+The site is configured for static export and can be deployed to:
+- **GitHub Pages** (via GitHub Actions)
+- **Cloudflare Pages**
+- **Vercel**
+- **Netlify**
+- Any static hosting service
+
+See deployment instructions in:
+- `GITHUB-DEPLOYMENT-INSTRUCTIONS.md`
+- `CLOUDFLARE-DEPLOYMENT-CHECKLIST.md`
 
 ## 📝 License
 

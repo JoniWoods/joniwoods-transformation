@@ -21,3 +21,18 @@ out
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Build artifacts - don't commit static exports to root
+/_next/
+/fonts/
+/images/
+/index.html
+/styles.css
+/404.html
+*.tar.gz
+
+# Documentation PDFs (keep markdown versions only)
+*.pdf
+!app/public/**/*.pdf
+# Keep the media kit
+!Joni*Woods*Media*Kit*.pdf
