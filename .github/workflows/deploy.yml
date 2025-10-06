@@ -34,12 +34,17 @@ jobs:
       - name: Build site
         working-directory: ./app
         run: yarn build
-        env:
-          NEXT_DIST_DIR: .build
         
       - name: Copy build to root
         run: |
-          cp -r app/.build/* .
+          if [ -d "app/out" ]; then
+            cp -r app/out/* .
+          elif [ -d "app/.build" ]; then
+            cp -r app/.build/* .
+          elif [ -d "app/.next" ]; then
+            echo "Error: No static export found. Build may have failed."
+            exit 1
+          fi
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
