@@ -1,37 +1,42 @@
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const distDir = process.env.NEXT_DIST_DIR || '.next';
-const standalonePath = path.join(distDir, 'standalone', 'app');
+const outDir = 'out';
+const buildDir = '.build';
 
-// Create standalone directory
-fs.mkdirSync(standalonePath, { recursive: true });
+console.log('Creating static export for GitHub Pages deployment...');
 
-// Copy all build artifacts
 try {
-  const files = ['_next', 'fonts', 'images', '*.html', '*.txt', '*.pdf'];
-  files.forEach(pattern => {
-    try {
-      execSync(`cp -r ${path.join(distDir, pattern)} ${standalonePath}/ 2>/dev/null`);
-    } catch (e) {
-      // Ignore errors for optional files
-    }
-  });
+  // Check if .build directory exists (created by Next.js export)
+  if (!fs.existsSync(buildDir)) {
+    console.error('Error: .build directory not found. Build may have failed.');
+    process.exit(1);
+  }
   
-  // Create static directory copy for backward compatibility
-  const staticSrc = path.join(distDir, '_next', 'static');
-  const staticDest = path.join(distDir, 'static');
-  if (fs.existsSync(staticSrc) && !fs.existsSync(staticDest)) {
-    try {
-      execSync(`cp -r "${staticSrc}" "${staticDest}"`);
-    } catch (e) {
-      // Ignore if already exists
+  // Create out directory
+  if (!fs.existsSync(outDir)) {
+    fs.mkdirSync(outDir, { recursive: true });
+  }
+  
+  // Copy all contents from .build to out
+  console.log('Copying build artifacts to out/ directory...');
+  execSync(`cp -r ${buildDir}/* ${outDir}/`);
+  
+  // Ensure 404.html exists for GitHub Pages
+  const notFoundHtml = path.join(outDir, '404.html');
+  if (!fs.existsSync(notFoundHtml)) {
+    // Create a simple 404 page if it doesn't exist
+    const indexHtml = path.join(outDir, 'index.html');
+    if (fs.existsSync(indexHtml)) {
+      fs.copyFileSync(indexHtml, notFoundHtml);
     }
   }
   
-  console.log('✓ Build artifacts copied to standalone directory');
+  console.log('✓ Static export created successfully in out/ directory');
+  console.log(`  Files: ${fs.readdirSync(outDir).length} items`);
 } catch (error) {
-  console.error('Error copying build artifacts:', error.message);
+  console.error('Error creating static export:', error.message);
+  console.error(error.stack);
+  process.exit(1);
 }
