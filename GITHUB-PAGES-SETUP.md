@@ -1,6 +1,8 @@
 
 # GitHub Pages Setup Instructions
 
+> **⚠️ REPOSITORY ARCHIVED** - This repository is archived and read-only. These setup instructions remain for reference. The live site continues to be available at https://joniwoods.github.io/joniwoods-transformation/. See [ARCHIVE.md](ARCHIVE.md) for details.
+
 ## Automatic Deployment
 This repository is configured with GitHub Actions for automatic deployment to GitHub Pages.
 

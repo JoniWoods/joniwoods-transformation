@@ -1,6 +1,8 @@
 
 # GitHub Pages Deployment Instructions
 
+> **⚠️ REPOSITORY ARCHIVED** - This repository is archived. These instructions remain for reference. The live GitHub Pages deployment continues to operate at https://joniwoods.github.io/joniwoods-transformation/. See [ARCHIVE.md](ARCHIVE.md) for details.
+
 ## 📦 Package Contents
 
 This package contains the complete Joni Woods website configured for GitHub Pages deployment.

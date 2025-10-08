@@ -1,6 +1,8 @@
 
 # 🧪 Transformation Form - Testing Guide
 
+> **⚠️ REPOSITORY ARCHIVED** - This repository is archived and read-only. This testing guide remains for reference. See [ARCHIVE.md](ARCHIVE.md) for details.
+
 ## ✅ What's Been Implemented
 
 ### 1. **Web3Forms Email Integration**

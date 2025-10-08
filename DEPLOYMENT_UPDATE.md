@@ -1,5 +1,7 @@
 # Deployment Update - October 4, 2025
 
+> **⚠️ REPOSITORY ARCHIVED** - This repository is now archived and read-only. This deployment update represents the final state. See [ARCHIVE.md](ARCHIVE.md) for more information.
+
 ## ✅ Changes Completed
 
 ### "Get the Newsletter" Button Added
