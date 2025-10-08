@@ -2,6 +2,8 @@
 # Cloudflare Pages Deployment Checklist
 ## Joni Woods Next.js Site
 
+> **⚠️ REPOSITORY ARCHIVED** - This repository is archived and read-only. These deployment instructions remain for reference. See [ARCHIVE.md](ARCHIVE.md) for details.
+
 **Date:** October 3, 2025  
 **Repository:** `https://github.com/JoniWoods/joniwoods-transformation`
 

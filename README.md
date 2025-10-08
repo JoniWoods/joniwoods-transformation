@@ -1,6 +1,8 @@
 
 # Joni Woods - Static Website
 
+> **⚠️ ARCHIVED REPOSITORY** - This repository is archived and read-only. See [ARCHIVE.md](ARCHIVE.md) for details. The live websites continue to operate normally.
+
 A beautiful, professional website for Joni Woods' book and coaching services, converted to static HTML for reliable deployment and lightning-fast performance.
 
 ## 🌟 Features
